@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>2 | Alex Wainwright</title>
-    <link>https://www.alexwhitelockw.me/publication_types/2/</link>
-      <atom:link href="https://www.alexwhitelockw.me/publication_types/2/index.xml" rel="self" type="application/rss+xml" />
+    <link>/publication_types/2/</link>
+      <atom:link href="/publication_types/2/index.xml" rel="self" type="application/rss+xml" />
     <description>2</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Wed, 12 Feb 2020 00:00:00 +0000</lastBuildDate>
     <image>
       <url>img/map[gravatar:%!s(bool=false) shape:circle]</url>
       <title>2</title>
-      <link>https://www.alexwhitelockw.me/publication_types/2/</link>
+      <link>/publication_types/2/</link>
     </image>
     
     <item>
       <title>Exploring Student Information Problem Solving Behaviour Using Fine-Grained Concept Map and Search Tool Data</title>
-      <link>https://www.alexwhitelockw.me/publication/ips_computereducation_paper/</link>
+      <link>/publication/ips_computereducation_paper/</link>
       <pubDate>Wed, 12 Feb 2020 00:00:00 +0000</pubDate>
-      <guid>https://www.alexwhitelockw.me/publication/ips_computereducation_paper/</guid>
+      <guid>/publication/ips_computereducation_paper/</guid>
       <description></description>
     </item>
     

@@ -2,45 +2,45 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags | Alex Wainwright</title>
-    <link>https://www.alexwhitelockw.me/tags/</link>
-      <atom:link href="https://www.alexwhitelockw.me/tags/index.xml" rel="self" type="application/rss+xml" />
+    <link>/tags/</link>
+      <atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
     <description>Tags</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Mon, 23 Mar 2020 00:00:00 +0000</lastBuildDate>
     <image>
       <url>img/map[gravatar:%!s(bool=false) shape:circle]</url>
       <title>Tags</title>
-      <link>https://www.alexwhitelockw.me/tags/</link>
+      <link>/tags/</link>
     </image>
     
     <item>
       <title>Epistemic Network Analysis</title>
-      <link>https://www.alexwhitelockw.me/tags/epistemic-network-analysis/</link>
+      <link>/tags/epistemic-network-analysis/</link>
       <pubDate>Mon, 23 Mar 2020 00:00:00 +0000</pubDate>
-      <guid>https://www.alexwhitelockw.me/tags/epistemic-network-analysis/</guid>
+      <guid>/tags/epistemic-network-analysis/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Learning Activity Offering</title>
-      <link>https://www.alexwhitelockw.me/tags/learning-activity-offering/</link>
+      <link>/tags/learning-activity-offering/</link>
       <pubDate>Mon, 23 Mar 2020 00:00:00 +0000</pubDate>
-      <guid>https://www.alexwhitelockw.me/tags/learning-activity-offering/</guid>
+      <guid>/tags/learning-activity-offering/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Event Sequencing</title>
-      <link>https://www.alexwhitelockw.me/tags/event-sequencing/</link>
+      <link>/tags/event-sequencing/</link>
       <pubDate>Wed, 12 Feb 2020 00:00:00 +0000</pubDate>
-      <guid>https://www.alexwhitelockw.me/tags/event-sequencing/</guid>
+      <guid>/tags/event-sequencing/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Information Seeking</title>
-      <link>https://www.alexwhitelockw.me/tags/information-seeking/</link>
+      <link>/tags/information-seeking/</link>
       <pubDate>Wed, 12 Feb 2020 00:00:00 +0000</pubDate>
-      <guid>https://www.alexwhitelockw.me/tags/information-seeking/</guid>
+      <guid>/tags/information-seeking/</guid>
       <description></description>
     </item>
     

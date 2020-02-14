@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Epistemic Network Analysis | Alex Wainwright</title>
-    <link>https://www.alexwhitelockw.me/tags/epistemic-network-analysis/</link>
-      <atom:link href="https://www.alexwhitelockw.me/tags/epistemic-network-analysis/index.xml" rel="self" type="application/rss+xml" />
+    <link>/tags/epistemic-network-analysis/</link>
+      <atom:link href="/tags/epistemic-network-analysis/index.xml" rel="self" type="application/rss+xml" />
     <description>Epistemic Network Analysis</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Mon, 23 Mar 2020 00:00:00 +0000</lastBuildDate>
     <image>
       <url>img/map[gravatar:%!s(bool=false) shape:circle]</url>
       <title>Epistemic Network Analysis</title>
-      <link>https://www.alexwhitelockw.me/tags/epistemic-network-analysis/</link>
+      <link>/tags/epistemic-network-analysis/</link>
     </image>
     
     <item>
       <title>Disciplinary Differences in Blended Learning Design: A Network Analytic Study</title>
-      <link>https://www.alexwhitelockw.me/publication/lak10_conference_paper/</link>
+      <link>/publication/lak10_conference_paper/</link>
       <pubDate>Mon, 23 Mar 2020 00:00:00 +0000</pubDate>
-      <guid>https://www.alexwhitelockw.me/publication/lak10_conference_paper/</guid>
+      <guid>/publication/lak10_conference_paper/</guid>
       <description>&lt;div class=&#34;alert alert-note&#34;&gt;
   &lt;div&gt;
     Click the &lt;em&gt;Slides&lt;/em&gt; button above to demo Academic&#39;s Markdown slides feature.
