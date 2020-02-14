@@ -3,120 +3,130 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://www.alexwhitelockw.me/</loc>
+    <loc>/</loc>
     <lastmod>2020-03-27T13:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.alexwhitelockw.me/talk/lak20_talk/</loc>
+    <loc>/talk/lak20_talk/</loc>
     <lastmod>2020-03-27T13:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.alexwhitelockw.me/talk/</loc>
+    <loc>/talk/</loc>
     <lastmod>2020-03-27T13:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.alexwhitelockw.me/authors/admin/</loc>
+    <loc>/authors/admin/</loc>
     <lastmod>2020-03-23T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.alexwhitelockw.me/publication_types/1/</loc>
+    <loc>/publication_types/1/</loc>
     <lastmod>2020-03-23T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.alexwhitelockw.me/authors/</loc>
+    <loc>/authors/</loc>
     <lastmod>2020-03-23T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.alexwhitelockw.me/publication/lak10_conference_paper/</loc>
+    <loc>/publication/lak10_conference_paper/</loc>
     <lastmod>2020-03-23T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.alexwhitelockw.me/tags/epistemic-network-analysis/</loc>
+    <loc>/tags/epistemic-network-analysis/</loc>
     <lastmod>2020-03-23T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.alexwhitelockw.me/tags/learning-activity-offering/</loc>
+    <loc>/tags/learning-activity-offering/</loc>
     <lastmod>2020-03-23T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.alexwhitelockw.me/publication_types/</loc>
+    <loc>/publication_types/</loc>
     <lastmod>2020-03-23T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.alexwhitelockw.me/publication/</loc>
+    <loc>/publication/</loc>
     <lastmod>2020-03-23T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.alexwhitelockw.me/tags/</loc>
+    <loc>/tags/</loc>
     <lastmod>2020-03-23T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.alexwhitelockw.me/publication_types/2/</loc>
+    <loc>/publication_types/2/</loc>
     <lastmod>2020-02-12T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.alexwhitelockw.me/tags/event-sequencing/</loc>
+    <loc>/tags/event-sequencing/</loc>
     <lastmod>2020-02-12T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.alexwhitelockw.me/publication/ips_computereducation_paper/</loc>
+    <loc>/publication/ips_computereducation_paper/</loc>
     <lastmod>2020-02-12T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.alexwhitelockw.me/tags/information-seeking/</loc>
+    <loc>/tags/information-seeking/</loc>
     <lastmod>2020-02-12T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.alexwhitelockw.me/slides/</loc>
+    <loc>/slides/</loc>
     <lastmod>2019-02-05T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.alexwhitelockw.me/slides/example/</loc>
+    <loc>/slides/example/</loc>
     <lastmod>2019-02-05T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.alexwhitelockw.me/project/external-project/</loc>
+    <loc>/privacy/</loc>
+    <lastmod>2018-06-28T00:00:00+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/terms/</loc>
+    <lastmod>2018-06-28T00:00:00+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/project/external-project/</loc>
     <lastmod>2016-04-27T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.alexwhitelockw.me/project/internal-project/</loc>
+    <loc>/project/internal-project/</loc>
     <lastmod>2016-04-27T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.alexwhitelockw.me/project/</loc>
+    <loc>/project/</loc>
     <lastmod>2016-04-27T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.alexwhitelockw.me/categories/</loc>
+    <loc>/categories/</loc>
   </url>
   
   <url>
-    <loc>https://www.alexwhitelockw.me/courses/</loc>
+    <loc>/courses/</loc>
   </url>
   
   <url>
-    <loc>https://www.alexwhitelockw.me/post/</loc>
+    <loc>/post/</loc>
   </url>
   
 </urlset>

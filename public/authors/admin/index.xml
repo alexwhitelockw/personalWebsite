@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Alex Wainwright</title>
-    <link>https://www.alexwhitelockw.me/authors/admin/</link>
-      <atom:link href="https://www.alexwhitelockw.me/authors/admin/index.xml" rel="self" type="application/rss+xml" />
+    <link>/authors/admin/</link>
+      <atom:link href="/authors/admin/index.xml" rel="self" type="application/rss+xml" />
     <description>Alex Wainwright</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Mon, 23 Mar 2020 00:00:00 +0000</lastBuildDate>
     <image>
       <url>img/map[gravatar:%!s(bool=false) shape:circle]</url>
       <title>Alex Wainwright</title>
-      <link>https://www.alexwhitelockw.me/authors/admin/</link>
+      <link>/authors/admin/</link>
     </image>
     
     <item>
       <title>Disciplinary Differences in Blended Learning Design: A Network Analytic Study</title>
-      <link>https://www.alexwhitelockw.me/publication/lak10_conference_paper/</link>
+      <link>/publication/lak10_conference_paper/</link>
       <pubDate>Mon, 23 Mar 2020 00:00:00 +0000</pubDate>
-      <guid>https://www.alexwhitelockw.me/publication/lak10_conference_paper/</guid>
+      <guid>/publication/lak10_conference_paper/</guid>
       <description>&lt;div class=&#34;alert alert-note&#34;&gt;
   &lt;div&gt;
     Click the &lt;em&gt;Slides&lt;/em&gt; button above to demo Academic&#39;s Markdown slides feature.
@@ -27,9 +27,9 @@
     
     <item>
       <title>Exploring Student Information Problem Solving Behaviour Using Fine-Grained Concept Map and Search Tool Data</title>
-      <link>https://www.alexwhitelockw.me/publication/ips_computereducation_paper/</link>
+      <link>/publication/ips_computereducation_paper/</link>
       <pubDate>Wed, 12 Feb 2020 00:00:00 +0000</pubDate>
-      <guid>https://www.alexwhitelockw.me/publication/ips_computereducation_paper/</guid>
+      <guid>/publication/ips_computereducation_paper/</guid>
       <description></description>
     </item>
     
