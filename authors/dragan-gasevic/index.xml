@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Dragan Gašević | Academic</title>
+    <link>/authors/dragan-gasevic/</link>
+      <atom:link href="/authors/dragan-gasevic/index.xml" rel="self" type="application/rss+xml" />
+    <description>Dragan Gašević</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Mon, 23 Mar 2020 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>img/map[gravatar:%!s(bool=false) shape:circle]</url>
+      <title>Dragan Gašević</title>
+      <link>/authors/dragan-gasevic/</link>
+    </image>
+    
+    <item>
+      <title>Disciplinary Differences in Blended Learning Design:A Network Analytic Study</title>
+      <link>/publication/conference-paper/</link>
+      <pubDate>Mon, 23 Mar 2020 00:00:00 +0000</pubDate>
+      <guid>/publication/conference-paper/</guid>
+      <description>&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    Click the &lt;em&gt;Slides&lt;/em&gt; button above to demo Academic&#39;s Markdown slides feature.
+  &lt;/div&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
