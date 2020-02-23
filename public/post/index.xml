@@ -5,7 +5,7 @@
     <link>/post/</link>
       <atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
     <description>Posts</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Tue, 18 Feb 2020 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Sun, 01 Mar 2020 00:00:00 +0000</lastBuildDate>
     <image>
       <url>img/map[gravatar:%!s(bool=false) shape:circle]</url>
       <title>Posts</title>
@@ -14,322 +14,402 @@
     
     <item>
       <title>Approaches to Learning: A Re-Evaluation</title>
-      <link>/post/approaches-to-learning-a-re-evaluation/</link>
+      <link>/post/biggs_approaches_post/approaches-to-learning-a-re-evaluation/</link>
       <pubDate>Tue, 18 Feb 2020 00:00:00 +0000</pubDate>
-      <guid>/post/approaches-to-learning-a-re-evaluation/</guid>
+      <guid>/post/biggs_approaches_post/approaches-to-learning-a-re-evaluation/</guid>
       <description>
-&lt;script src=&#34;/rmarkdown-libs/htmlwidgets/htmlwidgets.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;/rmarkdown-libs/viz/viz.js&#34;&gt;&lt;/script&gt;
-&lt;link href=&#34;/rmarkdown-libs/DiagrammeR-styles/styles.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;script src=&#34;/rmarkdown-libs/grViz-binding/grViz.js&#34;&gt;&lt;/script&gt;
 
 
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;biggs_diagram &amp;lt;-
-  create_graph() %&amp;gt;% 
-  add_node(type = &amp;quot;factor&amp;quot;,
-           label = &amp;quot;DS&amp;quot;,
-           node_aes = node_aes(
-             shape = &amp;quot;circle&amp;quot;,
-             height = .2,
-             width = .2,
-             fontsize = 4,
-             x = .5,
-             y = .50)
-           ) %&amp;gt;% 
-  add_node(type = &amp;quot;factor&amp;quot;,
-           label = &amp;quot;DM&amp;quot;,
-           node_aes = node_aes(
-             shape = &amp;quot;circle&amp;quot;,
-             height = .2,
-             width = .2,
-             fontsize = 4,
-             x = 1.75,
-             y = .4)) %&amp;gt;%
-  add_edge(from = 2, 
-           to = 1,
-           edge_aes = edge_aes(dir = &amp;quot;both&amp;quot;,
-                               headport = &amp;quot;n&amp;quot;,
-                               tailport = &amp;quot;n&amp;quot;)) %&amp;gt;% 
-  add_node(type = &amp;quot;factor&amp;quot;,
-           label = &amp;quot;SS&amp;quot;,
-           node_aes = node_aes(
-             shape = &amp;quot;circle&amp;quot;,
-             height = .2,
-             width = .2,
-             fontsize = 4,
-             x = 3,
-             y = .50)) %&amp;gt;% 
-  add_node(type = &amp;quot;factor&amp;quot;,
-           label = &amp;quot;SM&amp;quot;,
-           node_aes = node_aes(
-             shape = &amp;quot;circle&amp;quot;,
-             height = .2,
-             width = .2,
-             fontsize = 4,
-             x = 4.25,
-             y = .4)) %&amp;gt;% 
-  add_edge(from = 4, 
-           to = 2,
-           edge_aes = edge_aes(dir = &amp;quot;both&amp;quot;,
-                               headport = &amp;quot;n&amp;quot;,
-                               tailport = &amp;quot;n&amp;quot;))  %&amp;gt;% 
-  add_edge(from = 4,
-           to = 3,
-           edge_aes = edge_aes(dir = &amp;quot;both&amp;quot;,
-                               headport = &amp;quot;n&amp;quot;,
-                               tailport = &amp;quot;n&amp;quot;))&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## Warning: Prefixing `UQ()` with the rlang namespace is deprecated as of rlang 0.3.0.
-## Please use the non-prefixed form or `!!` instead.
+&lt;div id=&#34;introduction&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Introduction&lt;/h1&gt;
+&lt;p&gt;For my first blog post, I thought I would provide an outline of a work in progress paper that seeks to re-evaluate the work of &lt;span class=&#34;citation&#34;&gt;Biggs, Kember, and Leung (2001)&lt;/span&gt;. This previous work of &lt;span class=&#34;citation&#34;&gt;Biggs, Kember, and Leung (2001)&lt;/span&gt; led to the creation of the Revised Two-Factor Study Process Questionnaire (R-SPQ-2F) that has been extensively used, predominately as a means of profiling students (i.e., categorising students as Deep or Surface learners). Using data acquired from an institutional survey containing the 20-item R-SPQ-2F (n = 1158), two proposed models of &lt;span class=&#34;citation&#34;&gt;Biggs, Kember, and Leung (2001)&lt;/span&gt; were evaluated – a general summary is given below.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;proposed-models&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Proposed Models&lt;/h1&gt;
+&lt;p&gt;The first model is presented in Figure &lt;a href=&#34;#fig:item-model&#34;&gt;1&lt;/a&gt; and shows four factors (Deep Motive, Deep Strategy, Surface Strategy, and Surface Motive), each of which is measured by five items. The following correlations are specified:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Between Deep Motive and Deep Strategy&lt;/li&gt;
+&lt;li&gt;Between Deep Motive and Surface Motive&lt;/li&gt;
+&lt;li&gt;Between Surfrace Strategy and Surface Motive&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;No correlations were specified between the errors of any of the 20 items&lt;/p&gt;
+&lt;p&gt;The original work of &lt;span class=&#34;citation&#34;&gt;Biggs, Kember, and Leung (2001)&lt;/span&gt; reported a Comparative Fit Index (CFI) of .904 and Root Mean Square Residual (RMSR) of .058 for this first model. The latter does not fully meet the repeatedly touted rule of thumbs resulting from the simulation work of &lt;span class=&#34;citation&#34;&gt;Hu and Bentler (1999)&lt;/span&gt; (i.e., CFI = .95, SRMR = .08).&lt;/p&gt;
+&lt;div class=&#34;figure&#34;&gt;&lt;span id=&#34;fig:item-model&#34;&gt;&lt;/span&gt;
+&lt;img src=&#34;/post/biggs_approaches_post/biggs_approaches_model.jpeg&#34; alt=&#34;Proposed Item Level Model of the R-SPQ-2F&#34; width=&#34;90%&#34; /&gt;
+&lt;p class=&#34;caption&#34;&gt;
+Figure 1: Proposed Item Level Model of the R-SPQ-2F
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;Model two is presented in Figure &lt;a href=&#34;#fig:higher-order-model&#34;&gt;2&lt;/a&gt; and is composed of two higher-order factors, each measured by two factors. The two lower-order factors were created through item parcelling and resulted in a marked improvement in model fit &lt;span class=&#34;citation&#34;&gt;(CFI = .992, SRMR = .015; Biggs, Kember, and Leung 2001)&lt;/span&gt;.&lt;/p&gt;
+&lt;div class=&#34;figure&#34;&gt;&lt;span id=&#34;fig:higher-order-model&#34;&gt;&lt;/span&gt;
+&lt;img src=&#34;/post/biggs_approaches_post/bigg_approaches_model_two.jpeg&#34; alt=&#34;Higher Order Factor Model of the R-SPQ-2F&#34; width=&#34;40%&#34; /&gt;
+&lt;p class=&#34;caption&#34;&gt;
+Figure 2: Higher Order Factor Model of the R-SPQ-2F
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;Obtaining a “better fitting” model through the process of item-parcelling is a contentious issue, particularly as it masks areas of ill-fit. &lt;span class=&#34;citation&#34;&gt;Marsh et al. (2013)&lt;/span&gt; have previously stated that only when the conservative assumptions of Confirmatory Factor Analysis (CFA) are supported (i.e., no cross-loadings or correlated errors) then item-parcelling may be appropriate as the factors are unidimensional.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;re-analysis&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Re-Analysis&lt;/h1&gt;
+&lt;p&gt;Using the aforementioned collected data, I will demonstrate that both models (Figure &lt;a href=&#34;#fig:item-model&#34;&gt;1&lt;/a&gt; and &lt;a href=&#34;#fig:higher-order-model&#34;&gt;2&lt;/a&gt;) are not supported.&lt;/p&gt;
+&lt;div id=&#34;model-one&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Model One&lt;/h2&gt;
+&lt;p&gt;To explore Model One (Figure &lt;a href=&#34;#fig:item-model&#34;&gt;1&lt;/a&gt;), the data will be analysed using CFA, following the specifications of &lt;span class=&#34;citation&#34;&gt;Biggs, Kember, and Leung (2001)&lt;/span&gt;.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;biggs_model_one &amp;lt;- &amp;#39;
+
+  deep_strategy =~ Q1 + Q5 + Q9 + Q13 + Q17
+  
+  deep_motive =~ Q2 + Q6 + Q10 + Q14 + Q18
+  
+  surface_strategy =~ Q3 + Q7 + Q11 + Q15 + Q19
+  
+  surface_motive =~ Q4 + Q8 + Q12 + Q16 + Q20
+  
+  deep_strategy ~~ deep_motive
+  deep_strategy ~~ 0*surface_strategy
+  deep_strategy ~~ 0*surface_motive
+  
+  deep_motive ~~ surface_motive
+  deep_motive ~~ 0*surface_strategy
+  
+  surface_strategy ~~ surface_motive
+&amp;#39;
+
+biggs_model_one_cfa &amp;lt;- 
+  cfa(model = biggs_model_one,
+      data = biggsData,
+      ordered = c(&amp;quot;Q1&amp;quot;, &amp;quot;Q2&amp;quot;, &amp;quot;Q3&amp;quot;, &amp;quot;Q4&amp;quot;, &amp;quot;Q5&amp;quot;,
+                  &amp;quot;Q6&amp;quot;, &amp;quot;Q7&amp;quot;, &amp;quot;Q8&amp;quot;, &amp;quot;Q9&amp;quot;, &amp;quot;Q10&amp;quot;,
+                  &amp;quot;Q11&amp;quot;, &amp;quot;Q12&amp;quot;, &amp;quot;Q13&amp;quot;, &amp;quot;Q14&amp;quot;, &amp;quot;Q15&amp;quot;,
+                  &amp;quot;Q16&amp;quot;, &amp;quot;Q17&amp;quot;, &amp;quot;Q18&amp;quot;, &amp;quot;Q19&amp;quot;, &amp;quot;Q20&amp;quot;),
+      estimator = &amp;quot;WLSMV&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## Warning in lav_object_post_check(object): lavaan WARNING: covariance matrix of latent variables
+##                 is not positive definite;
+##                 use lavInspect(fit, &amp;quot;cov.lv&amp;quot;) to investigate.&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;summary(biggs_model_one_cfa)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## lavaan 0.6-4 ended normally after 39 iterations
 ## 
-##   # Bad:
-##   rlang::expr(mean(rlang::UQ(var) * 100))
+##   Optimization method                           NLMINB
+##   Number of free parameters                        103
 ## 
-##   # Ok:
-##   rlang::expr(mean(UQ(var) * 100))
+##   Number of observations                          1158
 ## 
-##   # Good:
-##   rlang::expr(mean(!!var * 100))
+##   Estimator                                       DWLS      Robust
+##   Model Fit Test Statistic                    2019.882    1190.331
+##   Degrees of freedom                               167         167
+##   P-value (Chi-square)                           0.000       0.000
+##   Scaling correction factor                                  1.849
+##   Shift parameter                                           97.843
+##     for simple second-order correction (Mplus variant)
 ## 
-## This warning is displayed once per session.&lt;/code&gt;&lt;/pre&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;biggs_diagram %&amp;gt;% 
-  add_node(type = &amp;quot;item&amp;quot;,
-           label = &amp;quot;&amp;quot;,
-           from = 1,
-           node_aes = node_aes(
-             shape = &amp;quot;rectangle&amp;quot;,
-             height = .15,
-             width = .15,
-             fontsize = 4,
-             x = 0,
-             y = -.5),
-           edge_aes = edge_aes(dir = &amp;quot;forward&amp;quot;)) %&amp;gt;% 
-  add_node(type = &amp;quot;item&amp;quot;,
-           label = &amp;quot;&amp;quot;,
-           from = 1,
-           node_aes = node_aes(
-             shape = &amp;quot;rectangle&amp;quot;,
-             height = .15,
-             width = .15,
-             fontsize = 4,
-             x = .25,
-             y = -.5)) %&amp;gt;% 
-  add_node(type = &amp;quot;item&amp;quot;,
-           label = &amp;quot;&amp;quot;,
-           from = 1,
-           node_aes = node_aes(
-             shape = &amp;quot;rectangle&amp;quot;,
-             height = .15,
-             width = .15,
-             fontsize = 4,
-             x = .5,
-             y = -.5)) %&amp;gt;% 
-  add_node(type = &amp;quot;item&amp;quot;,
-           label = &amp;quot;&amp;quot;,
-           from = 1,
-           node_aes = node_aes(
-             shape = &amp;quot;rectangle&amp;quot;,
-             height = .15,
-             width = .15,
-             fontsize = 4,
-             x = .75,
-             y = -.5)) %&amp;gt;% 
-  add_node(type = &amp;quot;item&amp;quot;,
-           label = &amp;quot;&amp;quot;,
-           from = 1,
-           node_aes = node_aes(
-             shape = &amp;quot;rectangle&amp;quot;,
-             height = .15,
-             width = .15,
-             fontsize = 4,
-             x = 1,
-             y = -.5)) %&amp;gt;% 
-  add_node(type = &amp;quot;item&amp;quot;,
-           label = &amp;quot;&amp;quot;,
-           from = 2,
-           node_aes = node_aes(
-             shape = &amp;quot;rectangle&amp;quot;,
-             height = .15,
-             width = .15,
-             fontsize = 4,
-             x = 1.25,
-             y = -.5)) %&amp;gt;% 
-  add_node(type = &amp;quot;item&amp;quot;,
-           label = &amp;quot;&amp;quot;,
-           from = 2,
-           node_aes = node_aes(
-             shape = &amp;quot;rectangle&amp;quot;,
-             height = .15,
-             width = .15,
-             fontsize = 4,
-             x = 1.50,
-             y = -.5)) %&amp;gt;% 
-  add_node(type = &amp;quot;item&amp;quot;,
-           label = &amp;quot;&amp;quot;,
-           from = 2,
-           node_aes = node_aes(
-             shape = &amp;quot;rectangle&amp;quot;,
-             height = .15,
-             width = .15,
-             fontsize = 4,
-             x = 1.75,
-             y = -.5)) %&amp;gt;% 
-  add_node(type = &amp;quot;item&amp;quot;,
-           label = &amp;quot;&amp;quot;,
-           from = 2,
-           node_aes = node_aes(
-             shape = &amp;quot;rectangle&amp;quot;,
-             height = .15,
-             width = .15,
-             fontsize = 4,
-             x = 2,
-             y = -.5)) %&amp;gt;% 
-  add_node(type = &amp;quot;item&amp;quot;,
-           label = &amp;quot;&amp;quot;,
-           from = 2,
-           node_aes = node_aes(
-             shape = &amp;quot;rectangle&amp;quot;,
-             height = .15,
-             width = .15,
-             fontsize = 4,
-             x = 2.25,
-             y = -.5)) %&amp;gt;% 
-  add_node(type = &amp;quot;item&amp;quot;,
-           label = &amp;quot;&amp;quot;,
-           from = 3,
-           node_aes = node_aes(
-             shape = &amp;quot;rectangle&amp;quot;,
-             height = .15,
-             width = .15,
-             fontsize = 4,
-             x = 2.50,
-             y = -.5)) %&amp;gt;% 
-  add_node(type = &amp;quot;item&amp;quot;,
-           label = &amp;quot;&amp;quot;,
-           from = 3,
-           node_aes = node_aes(
-             shape = &amp;quot;rectangle&amp;quot;,
-             height = .15,
-             width = .15,
-             fontsize = 4,
-             x = 2.75,
-             y = -.5)) %&amp;gt;% 
-  add_node(type = &amp;quot;item&amp;quot;,
-           label = &amp;quot;&amp;quot;,
-           from = 3,
-           node_aes = node_aes(
-             shape = &amp;quot;rectangle&amp;quot;,
-             height = .15,
-             width = .15,
-             fontsize = 4,
-             x = 3,
-             y = -.5)) %&amp;gt;% 
-  add_node(type = &amp;quot;item&amp;quot;,
-           label = &amp;quot;&amp;quot;,
-           from = 3,
-           node_aes = node_aes(
-             shape = &amp;quot;rectangle&amp;quot;,
-             height = .15,
-             width = .15,
-             fontsize = 4,
-             x = 3.25,
-             y = -.5)) %&amp;gt;% 
-  add_node(type = &amp;quot;item&amp;quot;,
-           label = &amp;quot;&amp;quot;,
-           from = 3,
-           node_aes = node_aes(
-             shape = &amp;quot;rectangle&amp;quot;,
-             height = .15,
-             width = .15,
-             fontsize = 4,
-             x = 3.50,
-             y = -.5)) %&amp;gt;% 
-  add_node(type = &amp;quot;item&amp;quot;,
-           label = &amp;quot;&amp;quot;,
-           from = 4,
-           node_aes = node_aes(
-             shape = &amp;quot;rectangle&amp;quot;,
-             height = .15,
-             width = .15,
-             fontsize = 4,
-             x = 3.75,
-             y = -.5)) %&amp;gt;% 
-  add_node(type = &amp;quot;item&amp;quot;,
-           label = &amp;quot;&amp;quot;,
-           from = 4,
-           node_aes = node_aes(
-             shape = &amp;quot;rectangle&amp;quot;,
-             height = .15,
-             width = .15,
-             fontsize = 4,
-             x = 4,
-             y = -.5)) %&amp;gt;% 
-  add_node(type = &amp;quot;item&amp;quot;,
-           label = &amp;quot;&amp;quot;,
-           from = 4,
-           node_aes = node_aes(
-             shape = &amp;quot;rectangle&amp;quot;,
-             height = .15,
-             width = .15,
-             fontsize = 4,
-             x = 4.25,
-             y = -.5)) %&amp;gt;% 
-  add_node(type = &amp;quot;item&amp;quot;,
-           label = &amp;quot;&amp;quot;,
-           from = 4,
-           node_aes = node_aes(
-             shape = &amp;quot;rectangle&amp;quot;,
-             height = .15,
-             width = .15,
-             fontsize = 4,
-             x = 4.50,
-             y = -.5)) %&amp;gt;% 
-  add_node(type = &amp;quot;item&amp;quot;,
-           label = &amp;quot;&amp;quot;,
-           from = 4,
-           node_aes = node_aes(
-             shape = &amp;quot;rectangle&amp;quot;,
-             height = .15,
-             width = .15,
-             fontsize = 4,
-             x = 4.75,
-             y = -.5)) %&amp;gt;% 
-  render_graph()&lt;/code&gt;&lt;/pre&gt;
-&lt;div id=&#34;htmlwidget-1&#34; style=&#34;width:672px;height:480px;&#34; class=&#34;grViz html-widget&#34;&gt;&lt;/div&gt;
-&lt;script type=&#34;application/json&#34; data-for=&#34;htmlwidget-1&#34;&gt;{&#34;x&#34;:{&#34;diagram&#34;:&#34;digraph {\n\ngraph [layout = \&#34;neato\&#34;,\n       outputorder = \&#34;edgesfirst\&#34;,\n       bgcolor = \&#34;white\&#34;]\n\nnode [fontname = \&#34;Helvetica\&#34;,\n      fontsize = \&#34;10\&#34;,\n      shape = \&#34;circle\&#34;,\n      fixedsize = \&#34;true\&#34;,\n      width = \&#34;0.5\&#34;,\n      style = \&#34;filled\&#34;,\n      fillcolor = \&#34;aliceblue\&#34;,\n      color = \&#34;gray70\&#34;,\n      fontcolor = \&#34;gray50\&#34;]\n\nedge [fontname = \&#34;Helvetica\&#34;,\n     fontsize = \&#34;8\&#34;,\n     len = \&#34;1.5\&#34;,\n     color = \&#34;gray80\&#34;,\n     arrowsize = \&#34;0.5\&#34;]\n\n  \&#34;1\&#34; [label = \&#34;DS\&#34;, shape = \&#34;circle\&#34;, fontsize = \&#34;4\&#34;, height = \&#34;0.2\&#34;, width = \&#34;0.2\&#34;, fillcolor = \&#34;#F0F8FF\&#34;, fontcolor = \&#34;#000000\&#34;, pos = \&#34;0.5,0.5!\&#34;] \n  \&#34;2\&#34; [label = \&#34;DM\&#34;, shape = \&#34;circle\&#34;, fontsize = \&#34;4\&#34;, height = \&#34;0.2\&#34;, width = \&#34;0.2\&#34;, fillcolor = \&#34;#F0F8FF\&#34;, fontcolor = \&#34;#000000\&#34;, pos = \&#34;1.75,0.4!\&#34;] \n  \&#34;3\&#34; [label = \&#34;SS\&#34;, shape = \&#34;circle\&#34;, fontsize = \&#34;4\&#34;, height = \&#34;0.2\&#34;, width = \&#34;0.2\&#34;, fillcolor = \&#34;#F0F8FF\&#34;, fontcolor = \&#34;#000000\&#34;, pos = \&#34;3,0.5!\&#34;] \n  \&#34;4\&#34; [label = \&#34;SM\&#34;, shape = \&#34;circle\&#34;, fontsize = \&#34;4\&#34;, height = \&#34;0.2\&#34;, width = \&#34;0.2\&#34;, fillcolor = \&#34;#F0F8FF\&#34;, fontcolor = \&#34;#000000\&#34;, pos = \&#34;4.25,0.4!\&#34;] \n  \&#34;5\&#34; [label = \&#34;\&#34;, shape = \&#34;rectangle\&#34;, fontsize = \&#34;4\&#34;, height = \&#34;0.15\&#34;, width = \&#34;0.15\&#34;, fillcolor = \&#34;#F0F8FF\&#34;, fontcolor = \&#34;#000000\&#34;, pos = \&#34;0,-0.5!\&#34;] \n  \&#34;6\&#34; [label = \&#34;\&#34;, shape = \&#34;rectangle\&#34;, fontsize = \&#34;4\&#34;, height = \&#34;0.15\&#34;, width = \&#34;0.15\&#34;, fillcolor = \&#34;#F0F8FF\&#34;, fontcolor = \&#34;#000000\&#34;, pos = \&#34;0.25,-0.5!\&#34;] \n  \&#34;7\&#34; [label = \&#34;\&#34;, shape = \&#34;rectangle\&#34;, fontsize = \&#34;4\&#34;, height = \&#34;0.15\&#34;, width = \&#34;0.15\&#34;, fillcolor = \&#34;#F0F8FF\&#34;, fontcolor = \&#34;#000000\&#34;, pos = \&#34;0.5,-0.5!\&#34;] \n  \&#34;8\&#34; [label = \&#34;\&#34;, shape = \&#34;rectangle\&#34;, fontsize = \&#34;4\&#34;, height = \&#34;0.15\&#34;, width = \&#34;0.15\&#34;, fillcolor = \&#34;#F0F8FF\&#34;, fontcolor = \&#34;#000000\&#34;, pos = \&#34;0.75,-0.5!\&#34;] \n  \&#34;9\&#34; [label = \&#34;\&#34;, shape = \&#34;rectangle\&#34;, fontsize = \&#34;4\&#34;, height = \&#34;0.15\&#34;, width = \&#34;0.15\&#34;, fillcolor = \&#34;#F0F8FF\&#34;, fontcolor = \&#34;#000000\&#34;, pos = \&#34;1,-0.5!\&#34;] \n  \&#34;10\&#34; [label = \&#34;\&#34;, shape = \&#34;rectangle\&#34;, fontsize = \&#34;4\&#34;, height = \&#34;0.15\&#34;, width = \&#34;0.15\&#34;, fillcolor = \&#34;#F0F8FF\&#34;, fontcolor = \&#34;#000000\&#34;, pos = \&#34;1.25,-0.5!\&#34;] \n  \&#34;11\&#34; [label = \&#34;\&#34;, shape = \&#34;rectangle\&#34;, fontsize = \&#34;4\&#34;, height = \&#34;0.15\&#34;, width = \&#34;0.15\&#34;, fillcolor = \&#34;#F0F8FF\&#34;, fontcolor = \&#34;#000000\&#34;, pos = \&#34;1.5,-0.5!\&#34;] \n  \&#34;12\&#34; [label = \&#34;\&#34;, shape = \&#34;rectangle\&#34;, fontsize = \&#34;4\&#34;, height = \&#34;0.15\&#34;, width = \&#34;0.15\&#34;, fillcolor = \&#34;#F0F8FF\&#34;, fontcolor = \&#34;#000000\&#34;, pos = \&#34;1.75,-0.5!\&#34;] \n  \&#34;13\&#34; [label = \&#34;\&#34;, shape = \&#34;rectangle\&#34;, fontsize = \&#34;4\&#34;, height = \&#34;0.15\&#34;, width = \&#34;0.15\&#34;, fillcolor = \&#34;#F0F8FF\&#34;, fontcolor = \&#34;#000000\&#34;, pos = \&#34;2,-0.5!\&#34;] \n  \&#34;14\&#34; [label = \&#34;\&#34;, shape = \&#34;rectangle\&#34;, fontsize = \&#34;4\&#34;, height = \&#34;0.15\&#34;, width = \&#34;0.15\&#34;, fillcolor = \&#34;#F0F8FF\&#34;, fontcolor = \&#34;#000000\&#34;, pos = \&#34;2.25,-0.5!\&#34;] \n  \&#34;15\&#34; [label = \&#34;\&#34;, shape = \&#34;rectangle\&#34;, fontsize = \&#34;4\&#34;, height = \&#34;0.15\&#34;, width = \&#34;0.15\&#34;, fillcolor = \&#34;#F0F8FF\&#34;, fontcolor = \&#34;#000000\&#34;, pos = \&#34;2.5,-0.5!\&#34;] \n  \&#34;16\&#34; [label = \&#34;\&#34;, shape = \&#34;rectangle\&#34;, fontsize = \&#34;4\&#34;, height = \&#34;0.15\&#34;, width = \&#34;0.15\&#34;, fillcolor = \&#34;#F0F8FF\&#34;, fontcolor = \&#34;#000000\&#34;, pos = \&#34;2.75,-0.5!\&#34;] \n  \&#34;17\&#34; [label = \&#34;\&#34;, shape = \&#34;rectangle\&#34;, fontsize = \&#34;4\&#34;, height = \&#34;0.15\&#34;, width = \&#34;0.15\&#34;, fillcolor = \&#34;#F0F8FF\&#34;, fontcolor = \&#34;#000000\&#34;, pos = \&#34;3,-0.5!\&#34;] \n  \&#34;18\&#34; [label = \&#34;\&#34;, shape = \&#34;rectangle\&#34;, fontsize = \&#34;4\&#34;, height = \&#34;0.15\&#34;, width = \&#34;0.15\&#34;, fillcolor = \&#34;#F0F8FF\&#34;, fontcolor = \&#34;#000000\&#34;, pos = \&#34;3.25,-0.5!\&#34;] \n  \&#34;19\&#34; [label = \&#34;\&#34;, shape = \&#34;rectangle\&#34;, fontsize = \&#34;4\&#34;, height = \&#34;0.15\&#34;, width = \&#34;0.15\&#34;, fillcolor = \&#34;#F0F8FF\&#34;, fontcolor = \&#34;#000000\&#34;, pos = \&#34;3.5,-0.5!\&#34;] \n  \&#34;20\&#34; [label = \&#34;\&#34;, shape = \&#34;rectangle\&#34;, fontsize = \&#34;4\&#34;, height = \&#34;0.15\&#34;, width = \&#34;0.15\&#34;, fillcolor = \&#34;#F0F8FF\&#34;, fontcolor = \&#34;#000000\&#34;, pos = \&#34;3.75,-0.5!\&#34;] \n  \&#34;21\&#34; [label = \&#34;\&#34;, shape = \&#34;rectangle\&#34;, fontsize = \&#34;4\&#34;, height = \&#34;0.15\&#34;, width = \&#34;0.15\&#34;, fillcolor = \&#34;#F0F8FF\&#34;, fontcolor = \&#34;#000000\&#34;, pos = \&#34;4,-0.5!\&#34;] \n  \&#34;22\&#34; [label = \&#34;\&#34;, shape = \&#34;rectangle\&#34;, fontsize = \&#34;4\&#34;, height = \&#34;0.15\&#34;, width = \&#34;0.15\&#34;, fillcolor = \&#34;#F0F8FF\&#34;, fontcolor = \&#34;#000000\&#34;, pos = \&#34;4.25,-0.5!\&#34;] \n  \&#34;23\&#34; [label = \&#34;\&#34;, shape = \&#34;rectangle\&#34;, fontsize = \&#34;4\&#34;, height = \&#34;0.15\&#34;, width = \&#34;0.15\&#34;, fillcolor = \&#34;#F0F8FF\&#34;, fontcolor = \&#34;#000000\&#34;, pos = \&#34;4.5,-0.5!\&#34;] \n  \&#34;24\&#34; [label = \&#34;\&#34;, shape = \&#34;rectangle\&#34;, fontsize = \&#34;4\&#34;, height = \&#34;0.15\&#34;, width = \&#34;0.15\&#34;, fillcolor = \&#34;#F0F8FF\&#34;, fontcolor = \&#34;#000000\&#34;, pos = \&#34;4.75,-0.5!\&#34;] \n\&#34;2\&#34;-&gt;\&#34;1\&#34; [dir = \&#34;both\&#34;, headport = \&#34;n\&#34;, tailport = \&#34;n\&#34;] \n\&#34;4\&#34;-&gt;\&#34;2\&#34; [dir = \&#34;both\&#34;, headport = \&#34;n\&#34;, tailport = \&#34;n\&#34;] \n\&#34;4\&#34;-&gt;\&#34;3\&#34; [dir = \&#34;both\&#34;, headport = \&#34;n\&#34;, tailport = \&#34;n\&#34;] \n\&#34;1\&#34;-&gt;\&#34;5\&#34; [dir = \&#34;forward\&#34;, dir = \&#34;forward\&#34;, dir = \&#34;forward\&#34;] \n\&#34;1\&#34;-&gt;\&#34;6\&#34; [dir = \&#34;forward\&#34;, dir = \&#34;forward\&#34;, dir = \&#34;forward\&#34;] \n\&#34;1\&#34;-&gt;\&#34;7\&#34; [dir = \&#34;forward\&#34;, dir = \&#34;forward\&#34;, dir = \&#34;forward\&#34;] \n\&#34;1\&#34;-&gt;\&#34;8\&#34; [dir = \&#34;forward\&#34;, dir = \&#34;forward\&#34;, dir = \&#34;forward\&#34;] \n\&#34;1\&#34;-&gt;\&#34;9\&#34; [dir = \&#34;forward\&#34;, dir = \&#34;forward\&#34;, dir = \&#34;forward\&#34;] \n\&#34;2\&#34;-&gt;\&#34;10\&#34; [dir = \&#34;forward\&#34;, dir = \&#34;forward\&#34;, dir = \&#34;forward\&#34;] \n\&#34;2\&#34;-&gt;\&#34;11\&#34; [dir = \&#34;forward\&#34;, dir = \&#34;forward\&#34;, dir = \&#34;forward\&#34;] \n\&#34;2\&#34;-&gt;\&#34;12\&#34; [dir = \&#34;forward\&#34;, dir = \&#34;forward\&#34;, dir = \&#34;forward\&#34;] \n\&#34;2\&#34;-&gt;\&#34;13\&#34; [dir = \&#34;forward\&#34;, dir = \&#34;forward\&#34;, dir = \&#34;forward\&#34;] \n\&#34;2\&#34;-&gt;\&#34;14\&#34; [dir = \&#34;forward\&#34;, dir = \&#34;forward\&#34;, dir = \&#34;forward\&#34;] \n\&#34;3\&#34;-&gt;\&#34;15\&#34; [dir = \&#34;forward\&#34;, dir = \&#34;forward\&#34;, dir = \&#34;forward\&#34;] \n\&#34;3\&#34;-&gt;\&#34;16\&#34; [dir = \&#34;forward\&#34;, dir = \&#34;forward\&#34;, dir = \&#34;forward\&#34;] \n\&#34;3\&#34;-&gt;\&#34;17\&#34; [dir = \&#34;forward\&#34;, dir = \&#34;forward\&#34;, dir = \&#34;forward\&#34;] \n\&#34;3\&#34;-&gt;\&#34;18\&#34; [dir = \&#34;forward\&#34;, dir = \&#34;forward\&#34;, dir = \&#34;forward\&#34;] \n\&#34;3\&#34;-&gt;\&#34;19\&#34; [dir = \&#34;forward\&#34;, dir = \&#34;forward\&#34;, dir = \&#34;forward\&#34;] \n\&#34;4\&#34;-&gt;\&#34;20\&#34; [dir = \&#34;forward\&#34;, dir = \&#34;forward\&#34;, dir = \&#34;forward\&#34;] \n\&#34;4\&#34;-&gt;\&#34;21\&#34; [dir = \&#34;forward\&#34;, dir = \&#34;forward\&#34;, dir = \&#34;forward\&#34;] \n\&#34;4\&#34;-&gt;\&#34;22\&#34; [dir = \&#34;forward\&#34;, dir = \&#34;forward\&#34;, dir = \&#34;forward\&#34;] \n\&#34;4\&#34;-&gt;\&#34;23\&#34; [dir = \&#34;forward\&#34;, dir = \&#34;forward\&#34;, dir = \&#34;forward\&#34;] \n\&#34;4\&#34;-&gt;\&#34;24\&#34; [dir = \&#34;forward\&#34;, dir = \&#34;forward\&#34;, dir = \&#34;forward\&#34;] \n}&#34;,&#34;config&#34;:{&#34;engine&#34;:&#34;dot&#34;,&#34;options&#34;:null}},&#34;evals&#34;:[],&#34;jsHooks&#34;:[]}&lt;/script&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;  grViz(&amp;quot;
-      digraph {
-      
-      graph [rankdir = TD,
-             layout = dot]
-      
-      node [shape = circle,
-            fixedsize = true,
-            width = .4]
-      DA; DS; SA; SS;
-      
-      node [shape = rectangle,
-            fixedsize = true,
-            width = .2,
-            height = .2,
-            label = &amp;#39;&amp;#39;]
-      1; 2; 3; 4; 5; 6; 7; 8; 9; 10;
-      11; 12; 13; 14; 15; 16; 17; 18; 19; 20;
-      
-      DA:w-&amp;gt;DS:w [dir=both]
-      DA:w-&amp;gt;SS:w [dir=both]
-              
-      SA:w-&amp;gt;SS:w [dir=both]
-      
-      DA-&amp;gt;{1,2,3,4,5}
-      
-      DS-&amp;gt;6 DS-&amp;gt;7 DS-&amp;gt;8 DS-&amp;gt;9 DS-&amp;gt;10
-      
-      SA-&amp;gt;11 SA-&amp;gt;12 SA-&amp;gt;13 SA-&amp;gt;14 SA-&amp;gt;15
-      
-      SS-&amp;gt;16 SS-&amp;gt;17 SS-&amp;gt;18 SS-&amp;gt;19 SS-&amp;gt;20
-      }&amp;quot;, width = 100)&lt;/code&gt;&lt;/pre&gt;
-&lt;div id=&#34;htmlwidget-2&#34; style=&#34;width:100px;height:480px;&#34; class=&#34;grViz html-widget&#34;&gt;&lt;/div&gt;
-&lt;script type=&#34;application/json&#34; data-for=&#34;htmlwidget-2&#34;&gt;{&#34;x&#34;:{&#34;diagram&#34;:&#34;\n      digraph {\n      \n      graph [rankdir = TD,\n             layout = dot]\n      \n      node [shape = circle,\n            fixedsize = true,\n            width = .4]\n      DA; DS; SA; SS;\n      \n      node [shape = rectangle,\n            fixedsize = true,\n            width = .2,\n            height = .2,\n            label = \&#34;\&#34;]\n      1; 2; 3; 4; 5; 6; 7; 8; 9; 10;\n      11; 12; 13; 14; 15; 16; 17; 18; 19; 20;\n      \n      DA:w-&gt;DS:w [dir=both]\n      DA:w-&gt;SS:w [dir=both]\n              \n      SA:w-&gt;SS:w [dir=both]\n      \n      DA-&gt;{1,2,3,4,5}\n      \n      DS-&gt;6 DS-&gt;7 DS-&gt;8 DS-&gt;9 DS-&gt;10\n      \n      SA-&gt;11 SA-&gt;12 SA-&gt;13 SA-&gt;14 SA-&gt;15\n      \n      SS-&gt;16 SS-&gt;17 SS-&gt;18 SS-&gt;19 SS-&gt;20\n      }&#34;,&#34;config&#34;:{&#34;engine&#34;:&#34;dot&#34;,&#34;options&#34;:null}},&#34;evals&#34;:[],&#34;jsHooks&#34;:[]}&lt;/script&gt;
+## Parameter Estimates:
+## 
+##   Information                                 Expected
+##   Information saturated (h1) model        Unstructured
+##   Standard Errors                           Robust.sem
+## 
+## Latent Variables:
+##                       Estimate  Std.Err  z-value  P(&amp;gt;|z|)
+##   deep_strategy =~                                       
+##     Q1                   1.000                           
+##     Q5                   0.936    0.036   25.663    0.000
+##     Q9                   1.096    0.039   28.389    0.000
+##     Q13                  1.157    0.037   31.029    0.000
+##     Q17                  0.888    0.039   22.626    0.000
+##   deep_motive =~                                         
+##     Q2                   1.000                           
+##     Q6                   1.236    0.041   29.972    0.000
+##     Q10                  1.035    0.039   26.519    0.000
+##     Q14                  1.176    0.042   27.763    0.000
+##     Q18                  0.831    0.041   20.327    0.000
+##   surface_strategy =~                                    
+##     Q3                   1.000                           
+##     Q7                   1.048    0.049   21.368    0.000
+##     Q11                  1.098    0.050   21.973    0.000
+##     Q15                  1.113    0.049   22.710    0.000
+##     Q19                  1.191    0.052   23.053    0.000
+##   surface_motive =~                                      
+##     Q4                   1.000                           
+##     Q8                   1.066    0.062   17.139    0.000
+##     Q12                  1.307    0.063   20.713    0.000
+##     Q16                  1.289    0.067   19.263    0.000
+##     Q20                  1.056    0.064   16.479    0.000
+## 
+## Covariances:
+##                       Estimate  Std.Err  z-value  P(&amp;gt;|z|)
+##   deep_strategy ~~                                       
+##     deep_motive          0.410    0.020   20.447    0.000
+##     surface_strtgy       0.000                           
+##     surface_motive       0.000                           
+##   deep_motive ~~                                         
+##     surface_motive      -0.008    0.012   -0.672    0.502
+##     surface_strtgy       0.000                           
+##   surface_strategy ~~                                    
+##     surface_motive       0.310    0.021   14.937    0.000
+## 
+## Intercepts:
+##                    Estimate  Std.Err  z-value  P(&amp;gt;|z|)
+##    .Q1                0.000                           
+##    .Q5                0.000                           
+##    .Q9                0.000                           
+##    .Q13               0.000                           
+##    .Q17               0.000                           
+##    .Q2                0.000                           
+##    .Q6                0.000                           
+##    .Q10               0.000                           
+##    .Q14               0.000                           
+##    .Q18               0.000                           
+##    .Q3                0.000                           
+##    .Q7                0.000                           
+##    .Q11               0.000                           
+##    .Q15               0.000                           
+##    .Q19               0.000                           
+##    .Q4                0.000                           
+##    .Q8                0.000                           
+##    .Q12               0.000                           
+##    .Q16               0.000                           
+##    .Q20               0.000                           
+##     deep_strategy     0.000                           
+##     deep_motive       0.000                           
+##     surface_strtgy    0.000                           
+##     surface_motive    0.000                           
+## 
+## Thresholds:
+##                    Estimate  Std.Err  z-value  P(&amp;gt;|z|)
+##     Q1|t1            -1.644    0.062  -26.478    0.000
+##     Q1|t2            -0.728    0.041  -17.930    0.000
+##     Q1|t3            -0.009    0.037   -0.235    0.814
+##     Q1|t4             1.116    0.047   23.990    0.000
+##     Q5|t1            -1.544    0.058  -26.521    0.000
+##     Q5|t2            -0.594    0.039  -15.106    0.000
+##     Q5|t3             0.124    0.037    3.348    0.001
+##     Q5|t4             0.961    0.044   21.959    0.000
+##     Q9|t1            -1.093    0.046  -23.716    0.000
+##     Q9|t2            -0.225    0.037   -6.046    0.000
+##     Q9|t3             0.484    0.038   12.576    0.000
+##     Q9|t4             1.369    0.053   26.028    0.000
+##     Q13|t1           -1.818    0.070  -25.882    0.000
+##     Q13|t2           -0.834    0.042  -19.907    0.000
+##     Q13|t3            0.108    0.037    2.937    0.003
+##     Q13|t4            1.197    0.048   24.808    0.000
+##     Q17|t1           -0.828    0.042  -19.799    0.000
+##     Q17|t2            0.163    0.037    4.404    0.000
+##     Q17|t3            0.856    0.042   20.284    0.000
+##     Q17|t4            1.558    0.059   26.529    0.000
+##     Q2|t1            -1.917    0.076  -25.276    0.000
+##     Q2|t2            -0.950    0.044  -21.806    0.000
+##     Q2|t3            -0.340    0.038   -9.030    0.000
+##     Q2|t4             0.737    0.041   18.097    0.000
+##     Q6|t1            -1.364    0.052  -26.000    0.000
+##     Q6|t2            -0.324    0.038   -8.621    0.000
+##     Q6|t3             0.455    0.038   11.881    0.000
+##     Q6|t4             1.369    0.053   26.028    0.000
+##     Q10|t1           -1.502    0.057  -26.470    0.000
+##     Q10|t2           -0.573    0.039  -14.648    0.000
+##     Q10|t3            0.167    0.037    4.522    0.000
+##     Q10|t4            1.224    0.049   25.048    0.000
+##     Q14|t1           -0.751    0.041  -18.374    0.000
+##     Q14|t2            0.143    0.037    3.876    0.000
+##     Q14|t3            0.789    0.041   19.091    0.000
+##     Q14|t4            1.628    0.061   26.500    0.000
+##     Q18|t1           -1.050    0.045  -23.198    0.000
+##     Q18|t2           -0.276    0.037   -7.393    0.000
+##     Q18|t3            0.377    0.038    9.963    0.000
+##     Q18|t4            1.188    0.048   24.726    0.000
+##     Q3|t1            -0.156    0.037   -4.228    0.000
+##     Q3|t2             0.720    0.041   17.763    0.000
+##     Q3|t3             1.171    0.048   24.559    0.000
+##     Q3|t4             1.754    0.067   26.174    0.000
+##     Q7|t1            -0.335    0.038   -8.913    0.000
+##     Q7|t2             0.576    0.039   14.705    0.000
+##     Q7|t3             1.252    0.050   25.277    0.000
+##     Q7|t4             2.156    0.093   23.148    0.000
+##     Q11|t1           -0.660    0.040  -16.527    0.000
+##     Q11|t2            0.281    0.037    7.510    0.000
+##     Q11|t3            0.933    0.043   21.549    0.000
+##     Q11|t4            1.890    0.074   25.456    0.000
+##     Q15|t1           -0.236    0.037   -6.339    0.000
+##     Q15|t2            0.641    0.040   16.130    0.000
+##     Q15|t3            1.295    0.051   25.597    0.000
+##     Q15|t4            1.945    0.078   25.073    0.000
+##     Q19|t1           -0.904    0.043  -21.079    0.000
+##     Q19|t2           -0.017    0.037   -0.470    0.638
+##     Q19|t3            0.644    0.040   16.187    0.000
+##     Q19|t4            1.342    0.052   25.885    0.000
+##     Q4|t1            -1.210    0.049  -24.929    0.000
+##     Q4|t2            -0.417    0.038  -10.952    0.000
+##     Q4|t3             0.258    0.037    6.925    0.000
+##     Q4|t4             1.342    0.052   25.885    0.000
+##     Q8|t1            -0.816    0.042  -19.582    0.000
+##     Q8|t2             0.015    0.037    0.411    0.681
+##     Q8|t3             0.687    0.040   17.090    0.000
+##     Q8|t4             1.509    0.057   26.481    0.000
+##     Q12|t1           -1.054    0.045  -23.246    0.000
+##     Q12|t2           -0.098    0.037   -2.643    0.008
+##     Q12|t3            0.679    0.040   16.921    0.000
+##     Q12|t4            1.687    0.064   26.389    0.000
+##     Q16|t1           -1.093    0.046  -23.716    0.000
+##     Q16|t2           -0.312    0.038   -8.329    0.000
+##     Q16|t3            0.303    0.037    8.095    0.000
+##     Q16|t4            1.035    0.045   23.005    0.000
+##     Q20|t1           -0.665    0.040  -16.640    0.000
+##     Q20|t2            0.056    0.037    1.527    0.127
+##     Q20|t3            0.706    0.040   17.483    0.000
+##     Q20|t4            1.483    0.056   26.432    0.000
+## 
+## Variances:
+##                    Estimate  Std.Err  z-value  P(&amp;gt;|z|)
+##    .Q1                0.570                           
+##    .Q5                0.623                           
+##    .Q9                0.483                           
+##    .Q13               0.424                           
+##    .Q17               0.660                           
+##    .Q2                0.615                           
+##    .Q6                0.412                           
+##    .Q10               0.587                           
+##    .Q14               0.468                           
+##    .Q18               0.734                           
+##    .Q3                0.640                           
+##    .Q7                0.605                           
+##    .Q11               0.567                           
+##    .Q15               0.555                           
+##    .Q19               0.490                           
+##    .Q4                0.750                           
+##    .Q8                0.716                           
+##    .Q12               0.573                           
+##    .Q16               0.584                           
+##    .Q20               0.721                           
+##     deep_strategy     0.430    0.025   16.966    0.000
+##     deep_motive       0.385    0.025   15.564    0.000
+##     surface_strtgy    0.360    0.028   12.810    0.000
+##     surface_motive    0.250    0.023   10.668    0.000
+## 
+## Scales y*:
+##                    Estimate  Std.Err  z-value  P(&amp;gt;|z|)
+##     Q1                1.000                           
+##     Q5                1.000                           
+##     Q9                1.000                           
+##     Q13               1.000                           
+##     Q17               1.000                           
+##     Q2                1.000                           
+##     Q6                1.000                           
+##     Q10               1.000                           
+##     Q14               1.000                           
+##     Q18               1.000                           
+##     Q3                1.000                           
+##     Q7                1.000                           
+##     Q11               1.000                           
+##     Q15               1.000                           
+##     Q19               1.000                           
+##     Q4                1.000                           
+##     Q8                1.000                           
+##     Q12               1.000                           
+##     Q16               1.000                           
+##     Q20               1.000&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;lavInspect(biggs_model_one_cfa, &amp;quot;cov.lv&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##                  dp_str dp_mtv srfc_s srfc_m
+## deep_strategy     0.430                     
+## deep_motive       0.410  0.385              
+## surface_strategy  0.000  0.000  0.360       
+## surface_motive    0.000 -0.008  0.310  0.250&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Model One was found to not be positive definite and can be attributed to a model implied covariance value of -.008 between the Deep Motive and Surface Motive factors. The model can viewed as being misspecified and is therefore rejected.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;model-two&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Model Two&lt;/h2&gt;
+&lt;p&gt;To evaluate whether the item-parcelling approach is appropriate when using the R-SPQ-2F, the unidimensionality of the four factors will be explored using Exploratory Factor Analysis (EFA).&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;biggs_model_two_efa &amp;lt;-
+  fa(r = biggsData,
+     nfactors = 4,
+     rotate = &amp;quot;varimax&amp;quot;,
+     fm = &amp;quot;wls&amp;quot;)
+
+print.psych(biggs_model_two_efa,
+            digits = 2,
+            cut = .2)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## Factor Analysis using method =  wls
+## Call: fa(r = biggsData, nfactors = 4, rotate = &amp;quot;varimax&amp;quot;, fm = &amp;quot;wls&amp;quot;)
+## Standardized loadings (pattern matrix) based upon correlation matrix
+##      WLS1  WLS2  WLS4  WLS3   h2   u2 com
+## Q1   0.63             -0.22 0.46 0.54 1.3
+## Q2   0.59             -0.22 0.40 0.60 1.3
+## Q3         0.56             0.35 0.65 1.2
+## Q4         0.52       -0.23 0.33 0.67 1.4
+## Q5   0.59                   0.36 0.64 1.0
+## Q6   0.72                   0.55 0.45 1.1
+## Q7         0.59        0.24 0.44 0.56 1.5
+## Q8         0.35  0.67       0.59 0.41 1.6
+## Q9   0.68                   0.47 0.53 1.0
+## Q10  0.61        0.22       0.44 0.56 1.3
+## Q11        0.49  0.50       0.50 0.50 2.2
+## Q12        0.61             0.41 0.59 1.2
+## Q13  0.73                   0.54 0.46 1.1
+## Q14  0.68              0.35 0.58 0.42 1.5
+## Q15        0.59        0.24 0.43 0.57 1.5
+## Q16        0.61       -0.21 0.42 0.58 1.2
+## Q17  0.53              0.26 0.37 0.63 1.6
+## Q18  0.47                   0.28 0.72 1.6
+## Q19        0.68             0.49 0.51 1.1
+## Q20        0.45  0.24       0.28 0.72 1.7
+## 
+##                       WLS1 WLS2 WLS4 WLS3
+## SS loadings           4.02 3.09 0.90 0.68
+## Proportion Var        0.20 0.15 0.05 0.03
+## Cumulative Var        0.20 0.36 0.40 0.43
+## Proportion Explained  0.46 0.36 0.10 0.08
+## Cumulative Proportion 0.46 0.82 0.92 1.00
+## 
+## Mean item complexity =  1.4
+## Test of the hypothesis that 4 factors are sufficient.
+## 
+## The degrees of freedom for the null model are  190  and the objective function was  6.41 with Chi Square of  7364.85
+## The degrees of freedom for the model are 116  and the objective function was  0.43 
+## 
+## The root mean square of the residuals (RMSR) is  0.03 
+## The df corrected root mean square of the residuals is  0.04 
+## 
+## The harmonic number of observations is  1158 with the empirical chi square  344.76  with prob &amp;lt;  1.5e-24 
+## The total number of observations was  1158  with Likelihood Chi Square =  494.66  with prob &amp;lt;  3.2e-48 
+## 
+## Tucker Lewis Index of factoring reliability =  0.913
+## RMSEA index =  0.053  and the 90 % confidence intervals are  0.048 0.058
+## BIC =  -323.66
+## Fit based upon off diagonal values = 0.99
+## Measures of factor score adequacy             
+##                                                   WLS1 WLS2 WLS4 WLS3
+## Correlation of (regression) scores with factors   0.94 0.90 0.77 0.74
+## Multiple R square of scores with factors          0.88 0.81 0.59 0.55
+## Minimum correlation of possible factor scores     0.76 0.62 0.17 0.09&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Three points can be made on the basis of the EFA results:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;A four factor solution does not seem to be supported – the third factor has seven absolute values below .30&lt;/li&gt;
+&lt;li&gt;Unidimensionality of the purported four factors is not supported – some items have loadings on non-target factors that are not of a nominal value (e.g., item 11)&lt;/li&gt;
+&lt;li&gt;There may be a case for a two factor model (Deep and Surface Approaches) without the need to break these up into Strategy and Motive factors.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;conclusion&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Conclusion&lt;/h1&gt;
+&lt;p&gt;The results do not provide support for the original work of &lt;span class=&#34;citation&#34;&gt;Biggs, Kember, and Leung (2001)&lt;/span&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Model One (Figure &lt;a href=&#34;#fig:item-model&#34;&gt;1&lt;/a&gt;) results in an inadmissible solution&lt;/li&gt;
+&lt;li&gt;Model Two (Figure &lt;a href=&#34;#fig:higher-order-model&#34;&gt;2&lt;/a&gt;) does not support the criteria of unidimensionality &lt;span class=&#34;citation&#34;&gt;(Marsh et al. 2013)&lt;/span&gt; that would make item-parcelling an admissible approach&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The work reiterates the importance of measurement and how this could potentially impact further research. And while the original models were not supported, there may be utility in exploring alternative factor models or approaches altogether (e.g., the characterisation of trace data).&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;references&#34; class=&#34;section level1 unnumbered&#34;&gt;
+&lt;h1&gt;References&lt;/h1&gt;
+&lt;div id=&#34;refs&#34; class=&#34;references&#34;&gt;
+&lt;div id=&#34;ref-biggs2001&#34;&gt;
+&lt;p&gt;Biggs, John, David Kember, and Doris Y.P. Leung. 2001. “The Revised Two-Factor Study Process Questionnaire: R-Spq-2F.” &lt;em&gt;British Journal of Educational Psychology&lt;/em&gt; 71 (1): 133–49. &lt;a href=&#34;https://doi.org/10.1348/000709901158433&#34;&gt;https://doi.org/10.1348/000709901158433&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;ref-hucutoff1999&#34;&gt;
+&lt;p&gt;Hu, Li‐tze, and Peter M. Bentler. 1999. “Cutoff Criteria for Fit Indexes in Covariance Structure Analysis: Conventional Criteria Versus New Alternatives.” &lt;em&gt;Structural Equation Modeling: A Multidisciplinary Journal&lt;/em&gt; 6 (1): 1–55. &lt;a href=&#34;https://doi.org/10.1080/10705519909540118&#34;&gt;https://doi.org/10.1080/10705519909540118&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;ref-marshwhy2013&#34;&gt;
+&lt;p&gt;Marsh, Herbert W., Oliver Lüdtke, Benjamin Nagengast, Alexandre J. S. Morin, and Matthias von Davier. 2013. “Why Item Parcels Are (Almost) Never Appropriate: Two Wrongs Do Not Make a Right—Camouflaging Misspecification with Item Parcels in CFA Models.” &lt;em&gt;Psychological Methods&lt;/em&gt; 18 (3): 257–84. &lt;a href=&#34;https://doi.org/10.1037/a0032773&#34;&gt;https://doi.org/10.1037/a0032773&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 </description>
     </item>
     
