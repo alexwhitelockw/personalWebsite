@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Approaches to Learning | Alex Wainwright</title>
+    <link>https://www.alexwhitelockw.me/tags/approaches-to-learning/</link>
+      <atom:link href="https://www.alexwhitelockw.me/tags/approaches-to-learning/index.xml" rel="self" type="application/rss+xml" />
+    <description>Approaches to Learning</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Fri, 20 Mar 2020 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>img/map[gravatar:%!s(bool=false) shape:circle]</url>
+      <title>Approaches to Learning</title>
+      <link>https://www.alexwhitelockw.me/tags/approaches-to-learning/</link>
+    </image>
+    
+    <item>
+      <title>A Re-Evaluation of the Approaches to Learning Questionnaire</title>
+      <link>https://www.alexwhitelockw.me/publication/preprint_biggs_approach_learning/</link>
+      <pubDate>Fri, 20 Mar 2020 00:00:00 +0000</pubDate>
+      <guid>https://www.alexwhitelockw.me/publication/preprint_biggs_approach_learning/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
