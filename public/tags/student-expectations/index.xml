@@ -2,29 +2,29 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Student Expectations | Alex Wainwright</title>
-    <link>/tags/student-expectations/</link>
-      <atom:link href="/tags/student-expectations/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://www.alexwhitelockw.me/tags/student-expectations/</link>
+      <atom:link href="https://www.alexwhitelockw.me/tags/student-expectations/index.xml" rel="self" type="application/rss+xml" />
     <description>Student Expectations</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Wed, 12 Feb 2020 00:00:00 +0000</lastBuildDate>
     <image>
       <url>img/map[gravatar:%!s(bool=false) shape:circle]</url>
       <title>Student Expectations</title>
-      <link>/tags/student-expectations/</link>
+      <link>https://www.alexwhitelockw.me/tags/student-expectations/</link>
     </image>
     
     <item>
       <title>Assessing the validity of a learning analytics expectation instrument: A multinational study</title>
-      <link>/publication/jcal_crosscultural_studentexpectations_paper/</link>
+      <link>https://www.alexwhitelockw.me/publication/jcal_crosscultural_studentexpectations_paper/</link>
       <pubDate>Wed, 12 Feb 2020 00:00:00 +0000</pubDate>
-      <guid>/publication/jcal_crosscultural_studentexpectations_paper/</guid>
+      <guid>https://www.alexwhitelockw.me/publication/jcal_crosscultural_studentexpectations_paper/</guid>
       <description></description>
     </item>
     
     <item>
       <title>The Student Expectations of Learning Analytics Questionnaire</title>
-      <link>/publication/jcal_studentexpectations_paper/</link>
+      <link>https://www.alexwhitelockw.me/publication/jcal_studentexpectations_paper/</link>
       <pubDate>Wed, 12 Feb 2020 00:00:00 +0000</pubDate>
-      <guid>/publication/jcal_studentexpectations_paper/</guid>
+      <guid>https://www.alexwhitelockw.me/publication/jcal_studentexpectations_paper/</guid>
       <description></description>
     </item>
     

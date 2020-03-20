@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts | Alex Wainwright</title>
-    <link>/post/</link>
-      <atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://www.alexwhitelockw.me/post/</link>
+      <atom:link href="https://www.alexwhitelockw.me/post/index.xml" rel="self" type="application/rss+xml" />
     <description>Posts</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Sun, 01 Mar 2020 00:00:00 +0000</lastBuildDate>
     <image>
       <url>img/map[gravatar:%!s(bool=false) shape:circle]</url>
       <title>Posts</title>
-      <link>/post/</link>
+      <link>https://www.alexwhitelockw.me/post/</link>
     </image>
     
     <item>
       <title>Approaches to Learning: A Re-Evaluation</title>
-      <link>/post/biggs_approaches_post/approaches-to-learning-a-re-evaluation/</link>
+      <link>https://www.alexwhitelockw.me/post/biggs_approaches_post/approaches-to-learning-a-re-evaluation/</link>
       <pubDate>Tue, 18 Feb 2020 00:00:00 +0000</pubDate>
-      <guid>/post/biggs_approaches_post/approaches-to-learning-a-re-evaluation/</guid>
+      <guid>https://www.alexwhitelockw.me/post/biggs_approaches_post/approaches-to-learning-a-re-evaluation/</guid>
       <description>
 
 
@@ -35,14 +35,14 @@
 &lt;p&gt;No correlations were specified between the errors of any of the 20 items&lt;/p&gt;
 &lt;p&gt;The original work of &lt;span class=&#34;citation&#34;&gt;Biggs, Kember, and Leung (2001)&lt;/span&gt; reported a Comparative Fit Index (CFI) of .904 and Root Mean Square Residual (RMSR) of .058 for this first model. The latter does not fully meet the repeatedly touted rule of thumbs resulting from the simulation work of &lt;span class=&#34;citation&#34;&gt;Hu and Bentler (1999)&lt;/span&gt; (i.e., CFI = .95, SRMR = .08).&lt;/p&gt;
 &lt;div class=&#34;figure&#34;&gt;&lt;span id=&#34;fig:item-model&#34;&gt;&lt;/span&gt;
-&lt;img src=&#34;/post/biggs_approaches_post/biggs_approaches_model.jpeg&#34; alt=&#34;Proposed Item Level Model of the R-SPQ-2F&#34; width=&#34;90%&#34; /&gt;
+&lt;img src=&#34;https://www.alexwhitelockw.me/post/biggs_approaches_post/biggs_approaches_model.jpeg&#34; alt=&#34;Proposed Item Level Model of the R-SPQ-2F&#34; width=&#34;90%&#34; /&gt;
 &lt;p class=&#34;caption&#34;&gt;
 Figure 1: Proposed Item Level Model of the R-SPQ-2F
 &lt;/p&gt;
 &lt;/div&gt;
 &lt;p&gt;Model two is presented in Figure &lt;a href=&#34;#fig:higher-order-model&#34;&gt;2&lt;/a&gt; and is composed of two higher-order factors, each measured by two factors. The two lower-order factors were created through item parcelling and resulted in a marked improvement in model fit &lt;span class=&#34;citation&#34;&gt;(CFI = .992, SRMR = .015; Biggs, Kember, and Leung 2001)&lt;/span&gt;.&lt;/p&gt;
 &lt;div class=&#34;figure&#34;&gt;&lt;span id=&#34;fig:higher-order-model&#34;&gt;&lt;/span&gt;
-&lt;img src=&#34;/post/biggs_approaches_post/bigg_approaches_model_two.jpeg&#34; alt=&#34;Higher Order Factor Model of the R-SPQ-2F&#34; width=&#34;40%&#34; /&gt;
+&lt;img src=&#34;https://www.alexwhitelockw.me/post/biggs_approaches_post/bigg_approaches_model_two.jpeg&#34; alt=&#34;Higher Order Factor Model of the R-SPQ-2F&#34; width=&#34;40%&#34; /&gt;
 &lt;p class=&#34;caption&#34;&gt;
 Figure 2: Higher Order Factor Model of the R-SPQ-2F
 &lt;/p&gt;
