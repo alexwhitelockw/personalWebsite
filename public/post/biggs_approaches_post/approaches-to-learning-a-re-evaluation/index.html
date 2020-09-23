@@ -611,6 +611,7 @@
 
     <div class="article-style">
       
+<script src="/rmarkdown-libs/header-attrs/header-attrs.js"></script>
 
 
 <div id="introduction" class="section level1">
@@ -680,26 +681,28 @@ biggs_model_one_cfa &lt;-
 ##                 is not positive definite;
 ##                 use lavInspect(fit, &quot;cov.lv&quot;) to investigate.</code></pre>
 <pre class="r"><code>summary(biggs_model_one_cfa)</code></pre>
-<pre><code>## lavaan 0.6-4 ended normally after 39 iterations
+<pre><code>## lavaan 0.6-6 ended normally after 39 iterations
 ## 
+##   Estimator                                       DWLS
 ##   Optimization method                           NLMINB
 ##   Number of free parameters                        103
-## 
+##                                                       
 ##   Number of observations                          1158
-## 
-##   Estimator                                       DWLS      Robust
-##   Model Fit Test Statistic                    2019.882    1190.331
+##                                                       
+## Model Test User Model:
+##                                               Standard      Robust
+##   Test Statistic                              2019.882    1190.331
 ##   Degrees of freedom                               167         167
 ##   P-value (Chi-square)                           0.000       0.000
 ##   Scaling correction factor                                  1.849
 ##   Shift parameter                                           97.843
-##     for simple second-order correction (Mplus variant)
+##        simple second-order correction                             
 ## 
 ## Parameter Estimates:
 ## 
+##   Standard errors                           Robust.sem
 ##   Information                                 Expected
 ##   Information saturated (h1) model        Unstructured
-##   Standard Errors                           Robust.sem
 ## 
 ## Latent Variables:
 ##                       Estimate  Std.Err  z-value  P(&gt;|z|)
@@ -991,9 +994,9 @@ print.psych(biggs_model_two_efa,
 </div>
 <div id="references" class="section level1 unnumbered">
 <h1>References</h1>
-<div id="refs" class="references">
+<div id="refs" class="references hanging-indent">
 <div id="ref-biggs2001">
-<p>Biggs, John, David Kember, and Doris Y.P. Leung. 2001. “The Revised Two-Factor Study Process Questionnaire: R-Spq-2F.” <em>British Journal of Educational Psychology</em> 71 (1): 133–49. <a href="https://doi.org/10.1348/000709901158433">https://doi.org/10.1348/000709901158433</a>.</p>
+<p>Biggs, John, David Kember, and Doris Y. P. Leung. 2001. “The Revised Two-Factor Study Process Questionnaire: R-Spq-2F.” <em>British Journal of Educational Psychology</em> 71 (1): 133–49. <a href="https://doi.org/10.1348/000709901158433">https://doi.org/10.1348/000709901158433</a>.</p>
 </div>
 <div id="ref-hucutoff1999">
 <p>Hu, Li‐tze, and Peter M. Bentler. 1999. “Cutoff Criteria for Fit Indexes in Covariance Structure Analysis: Conventional Criteria Versus New Alternatives.” <em>Structural Equation Modeling: A Multidisciplinary Journal</em> 6 (1): 1–55. <a href="https://doi.org/10.1080/10705519909540118">https://doi.org/10.1080/10705519909540118</a>.</p>

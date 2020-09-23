@@ -5,12 +5,25 @@
     <link>https://www.alexwhitelockw.me/</link>
       <atom:link href="https://www.alexwhitelockw.me/index.xml" rel="self" type="application/rss+xml" />
     <description>Alex Wainwright</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Fri, 20 Mar 2020 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Tue, 22 Sep 2020 00:00:00 +0000</lastBuildDate>
     <image>
       <url>img/map[gravatar:%!s(bool=false) shape:circle]</url>
       <title>Alex Wainwright</title>
       <link>https://www.alexwhitelockw.me/</link>
     </image>
+    
+    <item>
+      <title>Covid Megathread</title>
+      <link>https://www.alexwhitelockw.me/post/covid_megathread_post/covid-megathread/</link>
+      <pubDate>Tue, 22 Sep 2020 00:00:00 +0000</pubDate>
+      <guid>https://www.alexwhitelockw.me/post/covid_megathread_post/covid-megathread/</guid>
+      <description>
+&lt;script src=&#34;https://www.alexwhitelockw.me/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+
+
+&lt;p&gt;&lt;img src=&#34;https://www.alexwhitelockw.me/post/covid_megathread_post/2020-09-22-covid-megathread_files/figure-html/unnamed-chunk-1-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>A Re-Evaluation of the Approaches to Learning Questionnaire</title>
@@ -52,6 +65,7 @@
       <pubDate>Tue, 18 Feb 2020 00:00:00 +0000</pubDate>
       <guid>https://www.alexwhitelockw.me/post/biggs_approaches_post/approaches-to-learning-a-re-evaluation/</guid>
       <description>
+&lt;script src=&#34;https://www.alexwhitelockw.me/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 
 
 &lt;div id=&#34;introduction&#34; class=&#34;section level1&#34;&gt;
@@ -121,26 +135,28 @@ biggs_model_one_cfa &amp;lt;-
 ##                 is not positive definite;
 ##                 use lavInspect(fit, &amp;quot;cov.lv&amp;quot;) to investigate.&lt;/code&gt;&lt;/pre&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;summary(biggs_model_one_cfa)&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## lavaan 0.6-4 ended normally after 39 iterations
+&lt;pre&gt;&lt;code&gt;## lavaan 0.6-6 ended normally after 39 iterations
 ## 
+##   Estimator                                       DWLS
 ##   Optimization method                           NLMINB
 ##   Number of free parameters                        103
-## 
+##                                                       
 ##   Number of observations                          1158
-## 
-##   Estimator                                       DWLS      Robust
-##   Model Fit Test Statistic                    2019.882    1190.331
+##                                                       
+## Model Test User Model:
+##                                               Standard      Robust
+##   Test Statistic                              2019.882    1190.331
 ##   Degrees of freedom                               167         167
 ##   P-value (Chi-square)                           0.000       0.000
 ##   Scaling correction factor                                  1.849
 ##   Shift parameter                                           97.843
-##     for simple second-order correction (Mplus variant)
+##        simple second-order correction                             
 ## 
 ## Parameter Estimates:
 ## 
+##   Standard errors                           Robust.sem
 ##   Information                                 Expected
 ##   Information saturated (h1) model        Unstructured
-##   Standard Errors                           Robust.sem
 ## 
 ## Latent Variables:
 ##                       Estimate  Std.Err  z-value  P(&amp;gt;|z|)
@@ -432,9 +448,9 @@ print.psych(biggs_model_two_efa,
 &lt;/div&gt;
 &lt;div id=&#34;references&#34; class=&#34;section level1 unnumbered&#34;&gt;
 &lt;h1&gt;References&lt;/h1&gt;
-&lt;div id=&#34;refs&#34; class=&#34;references&#34;&gt;
+&lt;div id=&#34;refs&#34; class=&#34;references hanging-indent&#34;&gt;
 &lt;div id=&#34;ref-biggs2001&#34;&gt;
-&lt;p&gt;Biggs, John, David Kember, and Doris Y.P. Leung. 2001. “The Revised Two-Factor Study Process Questionnaire: R-Spq-2F.” &lt;em&gt;British Journal of Educational Psychology&lt;/em&gt; 71 (1): 133–49. &lt;a href=&#34;https://doi.org/10.1348/000709901158433&#34;&gt;https://doi.org/10.1348/000709901158433&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Biggs, John, David Kember, and Doris Y. P. Leung. 2001. “The Revised Two-Factor Study Process Questionnaire: R-Spq-2F.” &lt;em&gt;British Journal of Educational Psychology&lt;/em&gt; 71 (1): 133–49. &lt;a href=&#34;https://doi.org/10.1348/000709901158433&#34;&gt;https://doi.org/10.1348/000709901158433&lt;/a&gt;.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;ref-hucutoff1999&#34;&gt;
 &lt;p&gt;Hu, Li‐tze, and Peter M. Bentler. 1999. “Cutoff Criteria for Fit Indexes in Covariance Structure Analysis: Conventional Criteria Versus New Alternatives.” &lt;em&gt;Structural Equation Modeling: A Multidisciplinary Journal&lt;/em&gt; 6 (1): 1–55. &lt;a href=&#34;https://doi.org/10.1080/10705519909540118&#34;&gt;https://doi.org/10.1080/10705519909540118&lt;/a&gt;.&lt;/p&gt;
