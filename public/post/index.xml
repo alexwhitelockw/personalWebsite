@@ -2,23 +2,206 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts | Alex Wainwright</title>
-    <link>https://www.alexwhitelockw.me/post/</link>
-      <atom:link href="https://www.alexwhitelockw.me/post/index.xml" rel="self" type="application/rss+xml" />
+    <link>/post/</link>
+      <atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
     <description>Posts</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Sun, 01 Mar 2020 00:00:00 +0000</lastBuildDate>
     <image>
       <url>img/map[gravatar:%!s(bool=false) shape:circle]</url>
       <title>Posts</title>
-      <link>https://www.alexwhitelockw.me/post/</link>
+      <link>/post/</link>
     </image>
     
     <item>
-      <title>Approaches to Learning: A Re-Evaluation</title>
-      <link>https://www.alexwhitelockw.me/post/biggs_approaches_post/approaches-to-learning-a-re-evaluation/</link>
-      <pubDate>Tue, 18 Feb 2020 00:00:00 +0000</pubDate>
-      <guid>https://www.alexwhitelockw.me/post/biggs_approaches_post/approaches-to-learning-a-re-evaluation/</guid>
+      <title>Covid Megathread</title>
+      <link>/post/covid_megathread_post/covid-megathread/</link>
+      <pubDate>Tue, 22 Sep 2020 00:00:00 +0000</pubDate>
+      <guid>/post/covid_megathread_post/covid-megathread/</guid>
       <description>
-&lt;script src=&#34;https://www.alexwhitelockw.me/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+
+
+&lt;div id=&#34;overview&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Overview&lt;/h1&gt;
+&lt;p&gt;To keep myself sane during lockdown, I decided to analyse public opinion towards the Victorian lockdowns, specifically those opinions vocalised on Reddit. Below you’ll find various pieces of analysis of megathread posts covering the period from ‘2020-03-03’ to ‘2020-09-13’.&lt;/p&gt;
+&lt;div id=&#34;posting-behaviour&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Posting Behaviour&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;/post/covid_megathread_post/2020-09-22-covid-megathread_files/figure-html/unnamed-chunk-1-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;pre class=&#34;python&#34;&gt;&lt;code&gt;from gensim.summarization.summarizer import summarize
+import pandas as pd
+
+megathread_posts = pd.read_csv(&amp;quot;../../../static/data/reddit_covid_vader_output.csv&amp;quot;)
+
+reaction_posts = megathread_posts.loc[megathread_posts[&amp;#39;Created Date&amp;#39;].isin([&amp;#39;2020-07-07&amp;#39;, &amp;#39;2020-08-02&amp;#39;, &amp;#39;2020-09-06&amp;#39;]),
+                                      [&amp;#39;Text&amp;#39;, &amp;#39;Created Date&amp;#39;]]
+                                      
+summarised_reaction_posts = (reaction_posts.groupby(&amp;#39;Created Date&amp;#39;)[&amp;#39;Text&amp;#39;].
+                                            apply(lambda x: &amp;#39; &amp;#39;.join(x)).
+                                            reset_index())
+
+summarised_reaction_posts[&amp;#39;summarised_posts&amp;#39;] = (summarised_reaction_posts[&amp;#39;Text&amp;#39;].
+                                                              apply(lambda x: summarize(x, split=True)))
+                                                              
+summarised_reaction_posts = summarised_reaction_posts.explode(&amp;#39;summarised_posts&amp;#39;)
+
+summarised_reaction_posts.drop(columns=&amp;#39;Text&amp;#39;, inplace=True)
+
+summarised_reaction_posts&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##    Created Date                                   summarised_posts
+## 0    2020-07-07  * [The Age](https://www.theage.com.au/national...
+## 0    2020-07-07  * [The Guardian](https://www.theguardian.com/a...
+## 0    2020-07-07  Just want to highlight to everyone not in the ...
+## 0    2020-07-07  * You can&amp;#39;t visit a second residence outside t...
+## 0    2020-07-07  * 772 active coronavirus cases across state + ...
+## ..          ...                                                ...
+## 2    2020-09-06  It only takes a few for the virus to spread an...
+## 2    2020-09-06  &amp;gt; Tell me more about why it is remotely accept...
+## 2    2020-09-06  Tell me why you think it&amp;#39;s the slightest bit l...
+## 2    2020-09-06  And an investigation isn&amp;#39;t acceptable, you hav...
+## 2    2020-09-06  This is largely the reason I avoid engaging in...
+## 
+## [7288 rows x 2 columns]&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;summarised_posts &amp;lt;-
+  py$summarised_reaction_posts&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## Warning in py_to_r.pandas.core.frame.DataFrame(x): index contains duplicated
+## values: row names not set&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;knitr::kable(dplyr::sample_n(summarised_posts, 20))&lt;/code&gt;&lt;/pre&gt;
+&lt;table&gt;
+&lt;colgroup&gt;
+&lt;col width=&#34;3%&#34; /&gt;
+&lt;col width=&#34;96%&#34; /&gt;
+&lt;/colgroup&gt;
+&lt;thead&gt;
+&lt;tr class=&#34;header&#34;&gt;
+&lt;th align=&#34;left&#34;&gt;Created Date&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;summarised_posts&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;2020-08-02&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;If the discarded rubber near my work I don’t think tracking down people happens.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;2020-07-07&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;With social distancing guidelines in place, I can definitely see people getting very touch starved or touch sensitive.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;2020-07-07&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;But you know, it’s a new thing I’ve never done before and I’m going to be doing it by myself.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;2020-08-02&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;Why &lt;em&gt;limit&lt;/em&gt; the hours in the day that people can access a supermarket or go for a walks, therefore increasing the number of people undertaking these things when it is permissible?&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;2020-08-02&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;Just go instant jail, especially for the curfew, to make sure people follow the rules I mean Shepparton has no active cases and is still going to stage 3, so there ya go.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;2020-08-02&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;“Dan Andrews is awful, we need another leader like…” and then they don’t name who should replace him because it just turns out they hate all Labor people I don’t think anyone disagrees there.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;2020-08-02&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;That’s what i read a few weeks ago, that they tested the virus and it was traceable back to hotel quarantine.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;2020-09-06&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;A sudden explosion of dozens (or worse) cases in November because idiots are not going for tests in September/October’s fucks us all, again.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;2020-07-07&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;But considering the virus spreads via water droplets I don’t understand how you think a place where people spread waterdroplets around from sweat could ever stay open.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;2020-07-07&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;&lt;a href=&#34;https://i.imgur.com/4FaPUgY.jpg&#34; class=&#34;uri&#34;&gt;https://i.imgur.com/4FaPUgY.jpg&lt;/a&gt; It just means it won’t be certain suburbs/postcodes on restrictions, it will be the whole of Vic Statewide as in area (all VIC) and stage 3 is what level restrictions are in place I think lockdown is the stage 3 restrictions likely - only go out to get food, medication, exercise, care for someone.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;2020-09-06&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;It’s like Melbourne is suddenly full of teenagers that got told they’re grounded.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;2020-08-02&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;/s Normally celebrated August 31st for a few days so not sure that logic works..&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;2020-09-06&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;Maybe this whole thing has given me a bleak outlook on life now, but at the end of the day, death is going to happen one way or another I don’t think people actually grasp the concept of how the country/state will look after months more of this.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;2020-07-07&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;* Regarding groceries/food: Coles has repurposed its Waterfield St Coburg supermarket as a &#34;“pop-up fulfilment centre”&#34; packing boxes for the flats (from the amount of organisations handling food and specific dietary requests, I’m going to say that PROBABLY the tenants are fine for food now and people might want to reach out to ask about things like clothes or toys for children or entertainment instead).&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;2020-07-07&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;Looking at places like Florida and Cali who are so desperate to re-open despite huge numbers, it’s great we aren’t that selfish.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;2020-08-02&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;I think the good thing about hair dressers, is you’re likely to only go once or twice over the next 6 weeks tops.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;2020-08-02&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;I don’t believe things are going to get much better in another six weeks time with these new restrictions.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;2020-09-06&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;don’t erase us postcode lockdowners *5 Cases for 14 days.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;2020-09-06&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;Lockdowns work Thank god the entire country consists only of younger people I don’t think I have the stomach for the hotel quarantine otherwise I would already be gone.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;2020-07-07&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;reputable source or GTFO I agree….the word Hero is thrown around so frequently by the press these days that I think people are beginning to lose sight of it’s real meaning I haven’t seen a single reference to them being called &#34;“heroes”&#34; Yeah, you tell ‘em mate.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;img src=&#34;/post/covid_megathread_post/2020-09-22-covid-megathread_files/figure-html/unnamed-chunk-4-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;pre class=&#34;python&#34;&gt;&lt;code&gt;from gensim.summarization import keywords
+import matplotlib.pyplot as plt
+import numpy as np
+from PIL import Image
+from wordcloud import WordCloud
+
+reddit_vader = pd.read_csv(&amp;quot;../../../static/data/reddit_covid_vader_output.csv&amp;quot;)
+
+reddit_vader[&amp;#39;keywords&amp;#39;] = reddit_vader[&amp;#39;Text&amp;#39;].apply(lambda x: keywords(x, split=True))
+
+redd_vader_long = reddit_vader.explode(&amp;#39;keywords&amp;#39;)
+
+reddit_pos_posts = redd_vader_long.loc[(redd_vader_long[&amp;#39;compound&amp;#39;] &amp;gt; .4) &amp;amp; (redd_vader_long[&amp;#39;keywords&amp;#39;].str.contains(&amp;#39;NaN&amp;#39;) == False)]
+
+melb_logo =  np.array(Image.open(&amp;#39;../../../static/img/mask_image_reddit_analysis.png&amp;#39;))
+
+wc = WordCloud(mask=melb_logo,
+               background_color=&amp;#39;white&amp;#39;,
+               contour_width=3,
+               contour_color=&amp;#39;black&amp;#39;,
+               colormap=&amp;#39;cividis&amp;#39;)
+               
+wc.generate(&amp;#39; &amp;#39;.join(reddit_pos_posts[&amp;#39;keywords&amp;#39;]))&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## &amp;lt;wordcloud.wordcloud.WordCloud object at 0x7f9a01218580&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;python&#34;&gt;&lt;code&gt;plt.imshow(wc, interpolation=&amp;#39;bilinear&amp;#39;)
+plt.axis(&amp;quot;off&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## (-0.5, 755.5, 979.5, -0.5)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;python&#34;&gt;&lt;code&gt;plt.show()&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/post/covid_megathread_post/2020-09-22-covid-megathread_files/figure-html/unnamed-chunk-5-1.png&#34; width=&#34;960&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Approaches to Learning: A Re-Evaluation</title>
+      <link>/post/biggs_approaches_post/approaches-to-learning-a-re-evaluation/</link>
+      <pubDate>Tue, 18 Feb 2020 00:00:00 +0000</pubDate>
+      <guid>/post/biggs_approaches_post/approaches-to-learning-a-re-evaluation/</guid>
+      <description>
+&lt;script src=&#34;/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 
 
 &lt;div id=&#34;introduction&#34; class=&#34;section level1&#34;&gt;
@@ -36,14 +219,14 @@
 &lt;p&gt;No correlations were specified between the errors of any of the 20 items&lt;/p&gt;
 &lt;p&gt;The original work of &lt;span class=&#34;citation&#34;&gt;Biggs, Kember, and Leung (2001)&lt;/span&gt; reported a Comparative Fit Index (CFI) of .904 and Root Mean Square Residual (RMSR) of .058 for this first model. The latter does not fully meet the repeatedly touted rule of thumbs resulting from the simulation work of &lt;span class=&#34;citation&#34;&gt;Hu and Bentler (1999)&lt;/span&gt; (i.e., CFI = .95, SRMR = .08).&lt;/p&gt;
 &lt;div class=&#34;figure&#34;&gt;&lt;span id=&#34;fig:item-model&#34;&gt;&lt;/span&gt;
-&lt;img src=&#34;https://www.alexwhitelockw.me/post/biggs_approaches_post/biggs_approaches_model.jpeg&#34; alt=&#34;Proposed Item Level Model of the R-SPQ-2F&#34; width=&#34;90%&#34; /&gt;
+&lt;img src=&#34;/post/biggs_approaches_post/biggs_approaches_model.jpeg&#34; alt=&#34;Proposed Item Level Model of the R-SPQ-2F&#34; width=&#34;90%&#34; /&gt;
 &lt;p class=&#34;caption&#34;&gt;
 Figure 1: Proposed Item Level Model of the R-SPQ-2F
 &lt;/p&gt;
 &lt;/div&gt;
 &lt;p&gt;Model two is presented in Figure &lt;a href=&#34;#fig:higher-order-model&#34;&gt;2&lt;/a&gt; and is composed of two higher-order factors, each measured by two factors. The two lower-order factors were created through item parcelling and resulted in a marked improvement in model fit &lt;span class=&#34;citation&#34;&gt;(CFI = .992, SRMR = .015; Biggs, Kember, and Leung 2001)&lt;/span&gt;.&lt;/p&gt;
 &lt;div class=&#34;figure&#34;&gt;&lt;span id=&#34;fig:higher-order-model&#34;&gt;&lt;/span&gt;
-&lt;img src=&#34;https://www.alexwhitelockw.me/post/biggs_approaches_post/bigg_approaches_model_two.jpeg&#34; alt=&#34;Higher Order Factor Model of the R-SPQ-2F&#34; width=&#34;40%&#34; /&gt;
+&lt;img src=&#34;/post/biggs_approaches_post/bigg_approaches_model_two.jpeg&#34; alt=&#34;Higher Order Factor Model of the R-SPQ-2F&#34; width=&#34;40%&#34; /&gt;
 &lt;p class=&#34;caption&#34;&gt;
 Figure 2: Higher Order Factor Model of the R-SPQ-2F
 &lt;/p&gt;
@@ -411,59 +594,6 @@ print.psych(biggs_model_two_efa,
 &lt;div id=&#34;ref-marshwhy2013&#34;&gt;
 &lt;p&gt;Marsh, Herbert W., Oliver Lüdtke, Benjamin Nagengast, Alexandre J. S. Morin, and Matthias von Davier. 2013. “Why Item Parcels Are (Almost) Never Appropriate: Two Wrongs Do Not Make a Right—Camouflaging Misspecification with Item Parcels in CFA Models.” &lt;em&gt;Psychological Methods&lt;/em&gt; 18 (3): 257–84. &lt;a href=&#34;https://doi.org/10.1037/a0032773&#34;&gt;https://doi.org/10.1037/a0032773&lt;/a&gt;.&lt;/p&gt;
 &lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://www.alexwhitelockw.me/post/covid_megathread_post/2020-09-22-covid-megathread/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://www.alexwhitelockw.me/post/covid_megathread_post/2020-09-22-covid-megathread/</guid>
-      <description>&lt;script src=&#34;2020-09-22-covid-megathread_files/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
-
-
-&lt;div id=&#34;overview&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Overview&lt;/h1&gt;
-&lt;p&gt;To keep myself sane during lockdown, I decided to analyse public opinion towards the Victorian lockdowns, specifically those opinions vocalised on Reddit. Below you’ll find various pieces of analysis of megathread posts covering the period from ‘2020-03-03’ to ‘2020-09-13’.&lt;/p&gt;
-&lt;div id=&#34;posting-behaviour&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Posting Behaviour&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&#34;2020-09-22-covid-megathread_files/figure-html/unnamed-chunk-1-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;2020-09-22-covid-megathread_files/figure-html/unnamed-chunk-2-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
-&lt;pre class=&#34;python&#34;&gt;&lt;code&gt;from gensim.summarization import keywords
-import matplotlib.pyplot as plt
-import numpy as np
-import pandas as pd
-from PIL import Image
-from wordcloud import WordCloud
-
-reddit_vader = pd.read_csv(&amp;quot;../../../static/data/reddit_covid_vader_output.csv&amp;quot;)
-
-reddit_vader[&amp;#39;keywords&amp;#39;] = reddit_vader[&amp;#39;Text&amp;#39;].apply(lambda x: keywords(x, split=True))
-
-redd_vader_long = reddit_vader.explode(&amp;#39;keywords&amp;#39;)
-
-reddit_pos_posts = redd_vader_long.loc[(redd_vader_long[&amp;#39;compound&amp;#39;] &amp;gt; .4) &amp;amp; (redd_vader_long[&amp;#39;keywords&amp;#39;].str.contains(&amp;#39;NaN&amp;#39;) == False)]
-
-melb_logo =  np.array(Image.open(&amp;#39;../../../static/img/mask_image_reddit_analysis.png&amp;#39;))
-
-wc = WordCloud(mask=melb_logo,
-               background_color=&amp;#39;white&amp;#39;,
-               contour_width=3,
-               contour_color=&amp;#39;black&amp;#39;,
-               colormap=&amp;#39;cividis&amp;#39;)
-               
-wc.generate(&amp;#39; &amp;#39;.join(reddit_pos_posts[&amp;#39;keywords&amp;#39;]))&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## &amp;lt;wordcloud.wordcloud.WordCloud object at 0x7f970a804940&amp;gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;pre class=&#34;python&#34;&gt;&lt;code&gt;plt.imshow(wc, interpolation=&amp;#39;bilinear&amp;#39;)
-plt.axis(&amp;quot;off&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## (-0.5, 755.5, 979.5, -0.5)&lt;/code&gt;&lt;/pre&gt;
-&lt;pre class=&#34;python&#34;&gt;&lt;code&gt;plt.show()&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;2020-09-22-covid-megathread_files/figure-html/unnamed-chunk-3-1.png&#34; width=&#34;960&#34; /&gt;&lt;/p&gt;
-&lt;pre class=&#34;python&#34;&gt;&lt;code&gt;from PIL import Image
-import numpy as np
-&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 </description>
