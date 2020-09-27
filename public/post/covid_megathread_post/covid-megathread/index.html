@@ -28,10 +28,11 @@
   
     
   
-  <meta name="description" content="  ">
+  <meta name="description" content="Overview To keep myself sane during lockdown, I decided to analyse public opinion towards the Victorian lockdowns, specifically those opinions vocalised on Reddit. Below you’ll find various pieces of analysis of megathread posts covering the period from ‘2020-03-03’ to ‘2020-09-13’.
+Posting Behaviour from gensim.summarization import keywords import matplotlib.pyplot as plt import numpy as np import pandas as pd from PIL import Image from wordcloud import WordCloud reddit_vader = pd.">
 
   
-  <link rel="alternate" hreflang="en-us" href="https://www.alexwhitelockw.me/post/covid_megathread_post/covid-megathread/">
+  <link rel="alternate" hreflang="en-us" href="/post/covid_megathread_post/covid-megathread/">
 
   
 
@@ -253,7 +254,7 @@
   <link rel="icon" type="image/png" href="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_32x32_fill_lanczos_center_2.png">
   <link rel="apple-touch-icon" type="image/png" href="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_192x192_fill_lanczos_center_2.png">
 
-  <link rel="canonical" href="https://www.alexwhitelockw.me/post/covid_megathread_post/covid-megathread/">
+  <link rel="canonical" href="/post/covid_megathread_post/covid-megathread/">
 
   
   
@@ -270,9 +271,10 @@
   <meta property="twitter:creator" content="@alexwwainwright">
   
   <meta property="og:site_name" content="Alex Wainwright">
-  <meta property="og:url" content="https://www.alexwhitelockw.me/post/covid_megathread_post/covid-megathread/">
+  <meta property="og:url" content="/post/covid_megathread_post/covid-megathread/">
   <meta property="og:title" content="Covid Megathread | Alex Wainwright">
-  <meta property="og:description" content="  "><meta property="og:image" content="img/map[gravatar:%!s(bool=false) shape:circle]">
+  <meta property="og:description" content="Overview To keep myself sane during lockdown, I decided to analyse public opinion towards the Victorian lockdowns, specifically those opinions vocalised on Reddit. Below you’ll find various pieces of analysis of megathread posts covering the period from ‘2020-03-03’ to ‘2020-09-13’.
+Posting Behaviour from gensim.summarization import keywords import matplotlib.pyplot as plt import numpy as np import pandas as pd from PIL import Image from wordcloud import WordCloud reddit_vader = pd."><meta property="og:image" content="img/map[gravatar:%!s(bool=false) shape:circle]">
   <meta property="twitter:image" content="img/map[gravatar:%!s(bool=false) shape:circle]"><meta property="og:locale" content="en-us">
   
     
@@ -302,7 +304,7 @@
   "@type": "BlogPosting",
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "https://www.alexwhitelockw.me/post/covid_megathread_post/covid-megathread/"
+    "@id": "/post/covid_megathread_post/covid-megathread/"
   },
   "headline": "Covid Megathread",
   
@@ -319,10 +321,10 @@
     "name": "Alex Wainwright",
     "logo": {
       "@type": "ImageObject",
-      "url": "https://www.alexwhitelockw.me/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_192x192_fill_lanczos_center_2.png"
+      "url": "/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_192x192_fill_lanczos_center_2.png"
     }
   },
-  "description": "  "
+  "description": "Overview To keep myself sane during lockdown, I decided to analyse public opinion towards the Victorian lockdowns, specifically those opinions vocalised on Reddit. Below you’ll find various pieces of analysis of megathread posts covering the period from ‘2020-03-03’ to ‘2020-09-13’.\nPosting Behaviour from gensim.summarization import keywords import matplotlib.pyplot as plt import numpy as np import pandas as pd from PIL import Image from wordcloud import WordCloud reddit_vader = pd."
 }
 </script>
 
@@ -574,7 +576,7 @@
   
   <span class="middot-divider"></span>
   <span class="article-reading-time">
-    0 min read
+    1 min read
   </span>
   
 
@@ -614,7 +616,49 @@
 <script src="/rmarkdown-libs/header-attrs/header-attrs.js"></script>
 
 
+<div id="overview" class="section level1">
+<h1>Overview</h1>
+<p>To keep myself sane during lockdown, I decided to analyse public opinion towards the Victorian lockdowns, specifically those opinions vocalised on Reddit. Below you’ll find various pieces of analysis of megathread posts covering the period from ‘2020-03-03’ to ‘2020-09-13’.</p>
+<div id="posting-behaviour" class="section level2">
+<h2>Posting Behaviour</h2>
 <p><img src="/post/covid_megathread_post/2020-09-22-covid-megathread_files/figure-html/unnamed-chunk-1-1.png" width="672" /></p>
+<p><img src="/post/covid_megathread_post/2020-09-22-covid-megathread_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
+<pre class="python"><code>from gensim.summarization import keywords
+import matplotlib.pyplot as plt
+import numpy as np
+import pandas as pd
+from PIL import Image
+from wordcloud import WordCloud
+
+reddit_vader = pd.read_csv(&quot;../../../static/data/reddit_covid_vader_output.csv&quot;)
+
+reddit_vader[&#39;keywords&#39;] = reddit_vader[&#39;Text&#39;].apply(lambda x: keywords(x, split=True))
+
+redd_vader_long = reddit_vader.explode(&#39;keywords&#39;)
+
+reddit_pos_posts = redd_vader_long.loc[(redd_vader_long[&#39;compound&#39;] &gt; .4) &amp; (redd_vader_long[&#39;keywords&#39;].str.contains(&#39;NaN&#39;) == False)]
+
+melb_logo =  np.array(Image.open(&#39;../../../static/img/mask_image_reddit_analysis.png&#39;))
+
+wc = WordCloud(mask=melb_logo,
+               background_color=&#39;white&#39;,
+               contour_width=3,
+               contour_color=&#39;black&#39;,
+               colormap=&#39;cividis&#39;)
+               
+wc.generate(&#39; &#39;.join(reddit_pos_posts[&#39;keywords&#39;]))</code></pre>
+<pre><code>## &lt;wordcloud.wordcloud.WordCloud object at 0x7f9a8a7a8f10&gt;</code></pre>
+<pre class="python"><code>plt.figure(figsize=[20,10])
+plt.imshow(wc, interpolation=&#39;bilinear&#39;)
+plt.axis(&quot;off&quot;)</code></pre>
+<pre><code>## (-0.5, 755.5, 979.5, -0.5)</code></pre>
+<pre class="python"><code>plt.show()</code></pre>
+<p><img src="/post/covid_megathread_post/2020-09-22-covid-megathread_files/figure-html/unnamed-chunk-3-1.png" width="1920" /></p>
+<pre class="python"><code>from PIL import Image
+import numpy as np
+</code></pre>
+</div>
+</div>
 
     </div>
 
@@ -637,7 +681,7 @@
       
       
       <li>
-        <a href="https://twitter.com/intent/tweet?url=https://www.alexwhitelockw.me/post/covid_megathread_post/covid-megathread/&amp;text=Covid%20Megathread" target="_blank" rel="noopener" class="share-btn-twitter">
+        <a href="https://twitter.com/intent/tweet?url=/post/covid_megathread_post/covid-megathread/&amp;text=Covid%20Megathread" target="_blank" rel="noopener" class="share-btn-twitter">
           <i class="fab fa-twitter"></i>
         </a>
       </li>
@@ -650,7 +694,7 @@
       
       
       <li>
-        <a href="https://www.facebook.com/sharer.php?u=https://www.alexwhitelockw.me/post/covid_megathread_post/covid-megathread/&amp;t=Covid%20Megathread" target="_blank" rel="noopener" class="share-btn-facebook">
+        <a href="https://www.facebook.com/sharer.php?u=/post/covid_megathread_post/covid-megathread/&amp;t=Covid%20Megathread" target="_blank" rel="noopener" class="share-btn-facebook">
           <i class="fab fa-facebook"></i>
         </a>
       </li>
@@ -663,7 +707,7 @@
       
       
       <li>
-        <a href="mailto:?subject=Covid%20Megathread&amp;body=https://www.alexwhitelockw.me/post/covid_megathread_post/covid-megathread/" target="_blank" rel="noopener" class="share-btn-email">
+        <a href="mailto:?subject=Covid%20Megathread&amp;body=/post/covid_megathread_post/covid-megathread/" target="_blank" rel="noopener" class="share-btn-email">
           <i class="fas fa-envelope"></i>
         </a>
       </li>
@@ -676,7 +720,7 @@
       
       
       <li>
-        <a href="https://www.linkedin.com/shareArticle?url=https://www.alexwhitelockw.me/post/covid_megathread_post/covid-megathread/&amp;title=Covid%20Megathread" target="_blank" rel="noopener" class="share-btn-linkedin">
+        <a href="https://www.linkedin.com/shareArticle?url=/post/covid_megathread_post/covid-megathread/&amp;title=Covid%20Megathread" target="_blank" rel="noopener" class="share-btn-linkedin">
           <i class="fab fa-linkedin-in"></i>
         </a>
       </li>
@@ -689,7 +733,7 @@
       
       
       <li>
-        <a href="https://web.whatsapp.com/send?text=Covid%20Megathread%20https://www.alexwhitelockw.me/post/covid_megathread_post/covid-megathread/" target="_blank" rel="noopener" class="share-btn-whatsapp">
+        <a href="https://web.whatsapp.com/send?text=Covid%20Megathread%20/post/covid_megathread_post/covid-megathread/" target="_blank" rel="noopener" class="share-btn-whatsapp">
           <i class="fab fa-whatsapp"></i>
         </a>
       </li>
@@ -702,7 +746,7 @@
       
       
       <li>
-        <a href="https://service.weibo.com/share/share.php?url=https://www.alexwhitelockw.me/post/covid_megathread_post/covid-megathread/&amp;title=Covid%20Megathread" target="_blank" rel="noopener" class="share-btn-weibo">
+        <a href="https://service.weibo.com/share/share.php?url=/post/covid_megathread_post/covid-megathread/&amp;title=Covid%20Megathread" target="_blank" rel="noopener" class="share-btn-weibo">
           <i class="fab fa-weibo"></i>
         </a>
       </li>
@@ -742,7 +786,7 @@
     
 
     <div class="media-body">
-      <h5 class="card-title"><a href="https://www.alexwhitelockw.me">Alex Whitelock-Wainwright</a></h5>
+      <h5 class="card-title"><a href="/">Alex Whitelock-Wainwright</a></h5>
       <h6 class="card-subtitle">Research Fellow in Learning Analytics</h6>
       <p class="card-text">My research interests include learning analytics, information seeking behaviour, and psychometrics.</p>
       <ul class="network-icon" aria-hidden="true">
@@ -946,6 +990,16 @@
   
   <div class="container">
     <footer class="site-footer">
+  
+  <p class="powered-by">
+    
+      <a href="/privacy/">Privacy Policy</a>
+    
+    
+       &middot; 
+      <a href="/terms/">Terms</a>
+    
+  </p>
   
 
   <p class="powered-by">

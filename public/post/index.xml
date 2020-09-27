@@ -2,36 +2,78 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts | Alex Wainwright</title>
-    <link>https://www.alexwhitelockw.me/post/</link>
-      <atom:link href="https://www.alexwhitelockw.me/post/index.xml" rel="self" type="application/rss+xml" />
+    <link>/post/</link>
+      <atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
     <description>Posts</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Sun, 01 Mar 2020 00:00:00 +0000</lastBuildDate>
     <image>
       <url>img/map[gravatar:%!s(bool=false) shape:circle]</url>
       <title>Posts</title>
-      <link>https://www.alexwhitelockw.me/post/</link>
+      <link>/post/</link>
     </image>
     
     <item>
       <title>Covid Megathread</title>
-      <link>https://www.alexwhitelockw.me/post/covid_megathread_post/covid-megathread/</link>
+      <link>/post/covid_megathread_post/covid-megathread/</link>
       <pubDate>Tue, 22 Sep 2020 00:00:00 +0000</pubDate>
-      <guid>https://www.alexwhitelockw.me/post/covid_megathread_post/covid-megathread/</guid>
+      <guid>/post/covid_megathread_post/covid-megathread/</guid>
       <description>
-&lt;script src=&#34;https://www.alexwhitelockw.me/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 
 
-&lt;p&gt;&lt;img src=&#34;https://www.alexwhitelockw.me/post/covid_megathread_post/2020-09-22-covid-megathread_files/figure-html/unnamed-chunk-1-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;div id=&#34;overview&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Overview&lt;/h1&gt;
+&lt;p&gt;To keep myself sane during lockdown, I decided to analyse public opinion towards the Victorian lockdowns, specifically those opinions vocalised on Reddit. Below you’ll find various pieces of analysis of megathread posts covering the period from ‘2020-03-03’ to ‘2020-09-13’.&lt;/p&gt;
+&lt;div id=&#34;posting-behaviour&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Posting Behaviour&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;/post/covid_megathread_post/2020-09-22-covid-megathread_files/figure-html/unnamed-chunk-1-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/covid_megathread_post/2020-09-22-covid-megathread_files/figure-html/unnamed-chunk-2-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;pre class=&#34;python&#34;&gt;&lt;code&gt;from gensim.summarization import keywords
+import matplotlib.pyplot as plt
+import numpy as np
+import pandas as pd
+from PIL import Image
+from wordcloud import WordCloud
+
+reddit_vader = pd.read_csv(&amp;quot;../../../static/data/reddit_covid_vader_output.csv&amp;quot;)
+
+reddit_vader[&amp;#39;keywords&amp;#39;] = reddit_vader[&amp;#39;Text&amp;#39;].apply(lambda x: keywords(x, split=True))
+
+redd_vader_long = reddit_vader.explode(&amp;#39;keywords&amp;#39;)
+
+reddit_pos_posts = redd_vader_long.loc[(redd_vader_long[&amp;#39;compound&amp;#39;] &amp;gt; .4) &amp;amp; (redd_vader_long[&amp;#39;keywords&amp;#39;].str.contains(&amp;#39;NaN&amp;#39;) == False)]
+
+melb_logo =  np.array(Image.open(&amp;#39;../../../static/img/mask_image_reddit_analysis.png&amp;#39;))
+
+wc = WordCloud(mask=melb_logo,
+               background_color=&amp;#39;white&amp;#39;,
+               contour_width=3,
+               contour_color=&amp;#39;black&amp;#39;,
+               colormap=&amp;#39;cividis&amp;#39;)
+               
+wc.generate(&amp;#39; &amp;#39;.join(reddit_pos_posts[&amp;#39;keywords&amp;#39;]))&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## &amp;lt;wordcloud.wordcloud.WordCloud object at 0x7f9a8a7a8f10&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;python&#34;&gt;&lt;code&gt;plt.figure(figsize=[20,10])
+plt.imshow(wc, interpolation=&amp;#39;bilinear&amp;#39;)
+plt.axis(&amp;quot;off&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## (-0.5, 755.5, 979.5, -0.5)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;python&#34;&gt;&lt;code&gt;plt.show()&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/post/covid_megathread_post/2020-09-22-covid-megathread_files/figure-html/unnamed-chunk-3-1.png&#34; width=&#34;1920&#34; /&gt;&lt;/p&gt;
+&lt;pre class=&#34;python&#34;&gt;&lt;code&gt;from PIL import Image
+import numpy as np
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 </description>
     </item>
     
     <item>
       <title>Approaches to Learning: A Re-Evaluation</title>
-      <link>https://www.alexwhitelockw.me/post/biggs_approaches_post/approaches-to-learning-a-re-evaluation/</link>
+      <link>/post/biggs_approaches_post/approaches-to-learning-a-re-evaluation/</link>
       <pubDate>Tue, 18 Feb 2020 00:00:00 +0000</pubDate>
-      <guid>https://www.alexwhitelockw.me/post/biggs_approaches_post/approaches-to-learning-a-re-evaluation/</guid>
+      <guid>/post/biggs_approaches_post/approaches-to-learning-a-re-evaluation/</guid>
       <description>
-&lt;script src=&#34;https://www.alexwhitelockw.me/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 
 
 &lt;div id=&#34;introduction&#34; class=&#34;section level1&#34;&gt;
@@ -49,14 +91,14 @@
 &lt;p&gt;No correlations were specified between the errors of any of the 20 items&lt;/p&gt;
 &lt;p&gt;The original work of &lt;span class=&#34;citation&#34;&gt;Biggs, Kember, and Leung (2001)&lt;/span&gt; reported a Comparative Fit Index (CFI) of .904 and Root Mean Square Residual (RMSR) of .058 for this first model. The latter does not fully meet the repeatedly touted rule of thumbs resulting from the simulation work of &lt;span class=&#34;citation&#34;&gt;Hu and Bentler (1999)&lt;/span&gt; (i.e., CFI = .95, SRMR = .08).&lt;/p&gt;
 &lt;div class=&#34;figure&#34;&gt;&lt;span id=&#34;fig:item-model&#34;&gt;&lt;/span&gt;
-&lt;img src=&#34;https://www.alexwhitelockw.me/post/biggs_approaches_post/biggs_approaches_model.jpeg&#34; alt=&#34;Proposed Item Level Model of the R-SPQ-2F&#34; width=&#34;90%&#34; /&gt;
+&lt;img src=&#34;/post/biggs_approaches_post/biggs_approaches_model.jpeg&#34; alt=&#34;Proposed Item Level Model of the R-SPQ-2F&#34; width=&#34;90%&#34; /&gt;
 &lt;p class=&#34;caption&#34;&gt;
 Figure 1: Proposed Item Level Model of the R-SPQ-2F
 &lt;/p&gt;
 &lt;/div&gt;
 &lt;p&gt;Model two is presented in Figure &lt;a href=&#34;#fig:higher-order-model&#34;&gt;2&lt;/a&gt; and is composed of two higher-order factors, each measured by two factors. The two lower-order factors were created through item parcelling and resulted in a marked improvement in model fit &lt;span class=&#34;citation&#34;&gt;(CFI = .992, SRMR = .015; Biggs, Kember, and Leung 2001)&lt;/span&gt;.&lt;/p&gt;
 &lt;div class=&#34;figure&#34;&gt;&lt;span id=&#34;fig:higher-order-model&#34;&gt;&lt;/span&gt;
-&lt;img src=&#34;https://www.alexwhitelockw.me/post/biggs_approaches_post/bigg_approaches_model_two.jpeg&#34; alt=&#34;Higher Order Factor Model of the R-SPQ-2F&#34; width=&#34;40%&#34; /&gt;
+&lt;img src=&#34;/post/biggs_approaches_post/bigg_approaches_model_two.jpeg&#34; alt=&#34;Higher Order Factor Model of the R-SPQ-2F&#34; width=&#34;40%&#34; /&gt;
 &lt;p class=&#34;caption&#34;&gt;
 Figure 2: Higher Order Factor Model of the R-SPQ-2F
 &lt;/p&gt;
