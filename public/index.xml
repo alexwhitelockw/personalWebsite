@@ -2,84 +2,29 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Alex Wainwright</title>
-    <link>/</link>
-      <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://www.alexwhitelockw.me/</link>
+      <atom:link href="https://www.alexwhitelockw.me/index.xml" rel="self" type="application/rss+xml" />
     <description>Alex Wainwright</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Tue, 22 Sep 2020 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Fri, 20 Mar 2020 00:00:00 +0000</lastBuildDate>
     <image>
       <url>img/map[gravatar:%!s(bool=false) shape:circle]</url>
       <title>Alex Wainwright</title>
-      <link>/</link>
+      <link>https://www.alexwhitelockw.me/</link>
     </image>
     
     <item>
-      <title>Covid Megathread</title>
-      <link>/post/covid_megathread_post/covid-megathread/</link>
-      <pubDate>Tue, 22 Sep 2020 00:00:00 +0000</pubDate>
-      <guid>/post/covid_megathread_post/covid-megathread/</guid>
-      <description>
-&lt;script src=&#34;/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
-
-
-&lt;div id=&#34;overview&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Overview&lt;/h1&gt;
-&lt;p&gt;To keep myself sane during lockdown, I decided to analyse public opinion towards the Victorian lockdowns, specifically those opinions vocalised on Reddit. Below you’ll find various pieces of analysis of megathread posts covering the period from ‘2020-03-03’ to ‘2020-09-13’.&lt;/p&gt;
-&lt;div id=&#34;posting-behaviour&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Posting Behaviour&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&#34;/post/covid_megathread_post/2020-09-22-covid-megathread_files/figure-html/unnamed-chunk-1-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/post/covid_megathread_post/2020-09-22-covid-megathread_files/figure-html/unnamed-chunk-2-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
-&lt;pre class=&#34;python&#34;&gt;&lt;code&gt;from gensim.summarization import keywords
-import matplotlib.pyplot as plt
-import numpy as np
-import pandas as pd
-from PIL import Image
-from wordcloud import WordCloud
-
-reddit_vader = pd.read_csv(&amp;quot;../../../static/data/reddit_covid_vader_output.csv&amp;quot;)
-
-reddit_vader[&amp;#39;keywords&amp;#39;] = reddit_vader[&amp;#39;Text&amp;#39;].apply(lambda x: keywords(x, split=True))
-
-redd_vader_long = reddit_vader.explode(&amp;#39;keywords&amp;#39;)
-
-reddit_pos_posts = redd_vader_long.loc[(redd_vader_long[&amp;#39;compound&amp;#39;] &amp;gt; .4) &amp;amp; (redd_vader_long[&amp;#39;keywords&amp;#39;].str.contains(&amp;#39;NaN&amp;#39;) == False)]
-
-melb_logo =  np.array(Image.open(&amp;#39;../../../static/img/mask_image_reddit_analysis.png&amp;#39;))
-
-wc = WordCloud(mask=melb_logo,
-               background_color=&amp;#39;white&amp;#39;,
-               contour_width=3,
-               contour_color=&amp;#39;black&amp;#39;,
-               colormap=&amp;#39;cividis&amp;#39;)
-               
-wc.generate(&amp;#39; &amp;#39;.join(reddit_pos_posts[&amp;#39;keywords&amp;#39;]))&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## &amp;lt;wordcloud.wordcloud.WordCloud object at 0x7f9a8a7a8f10&amp;gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;pre class=&#34;python&#34;&gt;&lt;code&gt;plt.figure(figsize=[20,10])
-plt.imshow(wc, interpolation=&amp;#39;bilinear&amp;#39;)
-plt.axis(&amp;quot;off&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## (-0.5, 755.5, 979.5, -0.5)&lt;/code&gt;&lt;/pre&gt;
-&lt;pre class=&#34;python&#34;&gt;&lt;code&gt;plt.show()&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/covid_megathread_post/2020-09-22-covid-megathread_files/figure-html/unnamed-chunk-3-1.png&#34; width=&#34;1920&#34; /&gt;&lt;/p&gt;
-&lt;pre class=&#34;python&#34;&gt;&lt;code&gt;from PIL import Image
-import numpy as np
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-</description>
-    </item>
-    
-    <item>
       <title>A Re-Evaluation of the Approaches to Learning Questionnaire</title>
-      <link>/publication/preprint_biggs_approach_learning/</link>
+      <link>https://www.alexwhitelockw.me/publication/preprint_biggs_approach_learning/</link>
       <pubDate>Fri, 20 Mar 2020 00:00:00 +0000</pubDate>
-      <guid>/publication/preprint_biggs_approach_learning/</guid>
+      <guid>https://www.alexwhitelockw.me/publication/preprint_biggs_approach_learning/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Disciplinary Differences in Blended Learning Design: A Network Analytic Study</title>
-      <link>/publication/lak10_conference_paper_manuscript/</link>
+      <link>https://www.alexwhitelockw.me/publication/lak10_conference_paper_manuscript/</link>
       <pubDate>Sun, 01 Mar 2020 00:00:00 +0000</pubDate>
-      <guid>/publication/lak10_conference_paper_manuscript/</guid>
+      <guid>https://www.alexwhitelockw.me/publication/lak10_conference_paper_manuscript/</guid>
       <description>&lt;div class=&#34;alert alert-note&#34;&gt;
   &lt;div&gt;
     Click the &lt;em&gt;Slides&lt;/em&gt; button above to demo Academic&#39;s Markdown slides feature.
@@ -90,9 +35,9 @@ import numpy as np
     
     <item>
       <title>Disciplinary Differences in Blended Learning Design: A Network Analytic Study</title>
-      <link>/talk/lak10_conference_paper/</link>
+      <link>https://www.alexwhitelockw.me/talk/lak10_conference_paper/</link>
       <pubDate>Sun, 01 Mar 2020 00:00:00 +0000</pubDate>
-      <guid>/talk/lak10_conference_paper/</guid>
+      <guid>https://www.alexwhitelockw.me/talk/lak10_conference_paper/</guid>
       <description>&lt;div class=&#34;alert alert-note&#34;&gt;
   &lt;div&gt;
     Click the &lt;em&gt;Slides&lt;/em&gt; button above to demo Academic&#39;s Markdown slides feature.
@@ -103,11 +48,11 @@ import numpy as np
     
     <item>
       <title>Approaches to Learning: A Re-Evaluation</title>
-      <link>/post/biggs_approaches_post/approaches-to-learning-a-re-evaluation/</link>
+      <link>https://www.alexwhitelockw.me/post/biggs_approaches_post/approaches-to-learning-a-re-evaluation/</link>
       <pubDate>Tue, 18 Feb 2020 00:00:00 +0000</pubDate>
-      <guid>/post/biggs_approaches_post/approaches-to-learning-a-re-evaluation/</guid>
+      <guid>https://www.alexwhitelockw.me/post/biggs_approaches_post/approaches-to-learning-a-re-evaluation/</guid>
       <description>
-&lt;script src=&#34;/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://www.alexwhitelockw.me/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 
 
 &lt;div id=&#34;introduction&#34; class=&#34;section level1&#34;&gt;
@@ -125,14 +70,14 @@ import numpy as np
 &lt;p&gt;No correlations were specified between the errors of any of the 20 items&lt;/p&gt;
 &lt;p&gt;The original work of &lt;span class=&#34;citation&#34;&gt;Biggs, Kember, and Leung (2001)&lt;/span&gt; reported a Comparative Fit Index (CFI) of .904 and Root Mean Square Residual (RMSR) of .058 for this first model. The latter does not fully meet the repeatedly touted rule of thumbs resulting from the simulation work of &lt;span class=&#34;citation&#34;&gt;Hu and Bentler (1999)&lt;/span&gt; (i.e., CFI = .95, SRMR = .08).&lt;/p&gt;
 &lt;div class=&#34;figure&#34;&gt;&lt;span id=&#34;fig:item-model&#34;&gt;&lt;/span&gt;
-&lt;img src=&#34;/post/biggs_approaches_post/biggs_approaches_model.jpeg&#34; alt=&#34;Proposed Item Level Model of the R-SPQ-2F&#34; width=&#34;90%&#34; /&gt;
+&lt;img src=&#34;https://www.alexwhitelockw.me/post/biggs_approaches_post/biggs_approaches_model.jpeg&#34; alt=&#34;Proposed Item Level Model of the R-SPQ-2F&#34; width=&#34;90%&#34; /&gt;
 &lt;p class=&#34;caption&#34;&gt;
 Figure 1: Proposed Item Level Model of the R-SPQ-2F
 &lt;/p&gt;
 &lt;/div&gt;
 &lt;p&gt;Model two is presented in Figure &lt;a href=&#34;#fig:higher-order-model&#34;&gt;2&lt;/a&gt; and is composed of two higher-order factors, each measured by two factors. The two lower-order factors were created through item parcelling and resulted in a marked improvement in model fit &lt;span class=&#34;citation&#34;&gt;(CFI = .992, SRMR = .015; Biggs, Kember, and Leung 2001)&lt;/span&gt;.&lt;/p&gt;
 &lt;div class=&#34;figure&#34;&gt;&lt;span id=&#34;fig:higher-order-model&#34;&gt;&lt;/span&gt;
-&lt;img src=&#34;/post/biggs_approaches_post/bigg_approaches_model_two.jpeg&#34; alt=&#34;Higher Order Factor Model of the R-SPQ-2F&#34; width=&#34;40%&#34; /&gt;
+&lt;img src=&#34;https://www.alexwhitelockw.me/post/biggs_approaches_post/bigg_approaches_model_two.jpeg&#34; alt=&#34;Higher Order Factor Model of the R-SPQ-2F&#34; width=&#34;40%&#34; /&gt;
 &lt;p class=&#34;caption&#34;&gt;
 Figure 2: Higher Order Factor Model of the R-SPQ-2F
 &lt;/p&gt;
@@ -507,33 +452,33 @@ print.psych(biggs_model_two_efa,
     
     <item>
       <title>Assessing the validity of a learning analytics expectation instrument: A multinational study</title>
-      <link>/publication/jcal_crosscultural_studentexpectations_paper/</link>
+      <link>https://www.alexwhitelockw.me/publication/jcal_crosscultural_studentexpectations_paper/</link>
       <pubDate>Wed, 12 Feb 2020 00:00:00 +0000</pubDate>
-      <guid>/publication/jcal_crosscultural_studentexpectations_paper/</guid>
+      <guid>https://www.alexwhitelockw.me/publication/jcal_crosscultural_studentexpectations_paper/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Exploring Student Information Problem Solving Behaviour Using Fine-Grained Concept Map and Search Tool Data</title>
-      <link>/publication/ips_computereducation_paper/</link>
+      <link>https://www.alexwhitelockw.me/publication/ips_computereducation_paper/</link>
       <pubDate>Wed, 12 Feb 2020 00:00:00 +0000</pubDate>
-      <guid>/publication/ips_computereducation_paper/</guid>
+      <guid>https://www.alexwhitelockw.me/publication/ips_computereducation_paper/</guid>
       <description></description>
     </item>
     
     <item>
       <title>The Student Expectations of Learning Analytics Questionnaire</title>
-      <link>/publication/jcal_studentexpectations_paper/</link>
+      <link>https://www.alexwhitelockw.me/publication/jcal_studentexpectations_paper/</link>
       <pubDate>Wed, 12 Feb 2020 00:00:00 +0000</pubDate>
-      <guid>/publication/jcal_studentexpectations_paper/</guid>
+      <guid>https://www.alexwhitelockw.me/publication/jcal_studentexpectations_paper/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Slides</title>
-      <link>/slides/example/</link>
+      <link>https://www.alexwhitelockw.me/slides/example/</link>
       <pubDate>Tue, 05 Feb 2019 00:00:00 +0000</pubDate>
-      <guid>/slides/example/</guid>
+      <guid>https://www.alexwhitelockw.me/slides/example/</guid>
       <description>&lt;h1 id=&#34;create-slides-in-markdown-with-academic&#34;&gt;Create slides in Markdown with Academic&lt;/h1&gt;
 &lt;p&gt;
 &lt;a href=&#34;https://sourcethemes.com/academic/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Academic&lt;/a&gt; | 
@@ -663,41 +608,76 @@ Three
     </item>
     
     <item>
-      <title>Privacy Policy</title>
-      <link>/privacy/</link>
-      <pubDate>Thu, 28 Jun 2018 00:00:00 +0100</pubDate>
-      <guid>/privacy/</guid>
-      <description>&lt;p&gt;&amp;hellip;&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Terms</title>
-      <link>/terms/</link>
-      <pubDate>Thu, 28 Jun 2018 00:00:00 +0100</pubDate>
-      <guid>/terms/</guid>
-      <description>&lt;p&gt;&amp;hellip;&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
       <title>External Project</title>
-      <link>/project/external-project/</link>
+      <link>https://www.alexwhitelockw.me/project/external-project/</link>
       <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
-      <guid>/project/external-project/</guid>
+      <guid>https://www.alexwhitelockw.me/project/external-project/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Internal Project</title>
-      <link>/project/internal-project/</link>
+      <link>https://www.alexwhitelockw.me/project/internal-project/</link>
       <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
-      <guid>/project/internal-project/</guid>
+      <guid>https://www.alexwhitelockw.me/project/internal-project/</guid>
       <description>&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellus ac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum. Sed ac faucibus dolor, scelerisque sollicitudin nisi. Cras purus urna, suscipit quis sapien eu, pulvinar tempor diam. Quisque risus orci, mollis id ante sit amet, gravida egestas nisl. Sed ac tempus magna. Proin in dui enim. Donec condimentum, sem id dapibus fringilla, tellus enim condimentum arcu, nec volutpat est felis vel metus. Vestibulum sit amet erat at nulla eleifend gravida.&lt;/p&gt;
 &lt;p&gt;Nullam vel molestie justo. Curabitur vitae efficitur leo. In hac habitasse platea dictumst. Sed pulvinar mauris dui, eget varius purus congue ac. Nulla euismod, lorem vel elementum dapibus, nunc justo porta mi, sed tempus est est vel tellus. Nam et enim eleifend, laoreet sem sit amet, elementum sem. Morbi ut leo congue, maximus velit ut, finibus arcu. In et libero cursus, rutrum risus non, molestie leo. Nullam congue quam et volutpat malesuada. Sed risus tortor, pulvinar et dictum nec, sodales non mi. Phasellus lacinia commodo laoreet. Nam mollis, erat in feugiat consectetur, purus eros egestas tellus, in auctor urna odio at nibh. Mauris imperdiet nisi ac magna convallis, at rhoncus ligula cursus.&lt;/p&gt;
 &lt;p&gt;Cras aliquam rhoncus ipsum, in hendrerit nunc mattis vitae. Duis vitae efficitur metus, ac tempus leo. Cras nec fringilla lacus. Quisque sit amet risus at ipsum pharetra commodo. Sed aliquam mauris at consequat eleifend. Praesent porta, augue sed viverra bibendum, neque ante euismod ante, in vehicula justo lorem ac eros. Suspendisse augue libero, venenatis eget tincidunt ut, malesuada at lorem. Donec vitae bibendum arcu. Aenean maximus nulla non pretium iaculis. Quisque imperdiet, nulla in pulvinar aliquet, velit quam ultrices quam, sit amet fringilla leo sem vel nunc. Mauris in lacinia lacus.&lt;/p&gt;
 &lt;p&gt;Suspendisse a tincidunt lacus. Curabitur at urna sagittis, dictum ante sit amet, euismod magna. Sed rutrum massa id tortor commodo, vitae elementum turpis tempus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean purus turpis, venenatis a ullamcorper nec, tincidunt et massa. Integer posuere quam rutrum arcu vehicula imperdiet. Mauris ullamcorper quam vitae purus congue, quis euismod magna eleifend. Vestibulum semper vel augue eget tincidunt. Fusce eget justo sodales, dapibus odio eu, ultrices lorem. Duis condimentum lorem id eros commodo, in facilisis mauris scelerisque. Morbi sed auctor leo. Nullam volutpat a lacus quis pharetra. Nulla congue rutrum magna a ornare.&lt;/p&gt;
 &lt;p&gt;Aliquam in turpis accumsan, malesuada nibh ut, hendrerit justo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Quisque sed erat nec justo posuere suscipit. Donec ut efficitur arcu, in malesuada neque. Nunc dignissim nisl massa, id vulputate nunc pretium nec. Quisque eget urna in risus suscipit ultricies. Pellentesque odio odio, tincidunt in eleifend sed, posuere a diam. Nam gravida nisl convallis semper elementum. Morbi vitae felis faucibus, vulputate orci placerat, aliquet nisi. Aliquam erat volutpat. Maecenas sagittis pulvinar purus, sed porta quam laoreet at.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://www.alexwhitelockw.me/post/covid_megathread_post/2020-09-22-covid-megathread/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://www.alexwhitelockw.me/post/covid_megathread_post/2020-09-22-covid-megathread/</guid>
+      <description>&lt;script src=&#34;2020-09-22-covid-megathread_files/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+
+
+&lt;div id=&#34;overview&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Overview&lt;/h1&gt;
+&lt;p&gt;To keep myself sane during lockdown, I decided to analyse public opinion towards the Victorian lockdowns, specifically those opinions vocalised on Reddit. Below you’ll find various pieces of analysis of megathread posts covering the period from ‘2020-03-03’ to ‘2020-09-13’.&lt;/p&gt;
+&lt;div id=&#34;posting-behaviour&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Posting Behaviour&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;2020-09-22-covid-megathread_files/figure-html/unnamed-chunk-1-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;2020-09-22-covid-megathread_files/figure-html/unnamed-chunk-2-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;pre class=&#34;python&#34;&gt;&lt;code&gt;from gensim.summarization import keywords
+import matplotlib.pyplot as plt
+import numpy as np
+import pandas as pd
+from PIL import Image
+from wordcloud import WordCloud
+
+reddit_vader = pd.read_csv(&amp;quot;../../../static/data/reddit_covid_vader_output.csv&amp;quot;)
+
+reddit_vader[&amp;#39;keywords&amp;#39;] = reddit_vader[&amp;#39;Text&amp;#39;].apply(lambda x: keywords(x, split=True))
+
+redd_vader_long = reddit_vader.explode(&amp;#39;keywords&amp;#39;)
+
+reddit_pos_posts = redd_vader_long.loc[(redd_vader_long[&amp;#39;compound&amp;#39;] &amp;gt; .4) &amp;amp; (redd_vader_long[&amp;#39;keywords&amp;#39;].str.contains(&amp;#39;NaN&amp;#39;) == False)]
+
+melb_logo =  np.array(Image.open(&amp;#39;../../../static/img/mask_image_reddit_analysis.png&amp;#39;))
+
+wc = WordCloud(mask=melb_logo,
+               background_color=&amp;#39;white&amp;#39;,
+               contour_width=3,
+               contour_color=&amp;#39;black&amp;#39;,
+               colormap=&amp;#39;cividis&amp;#39;)
+               
+wc.generate(&amp;#39; &amp;#39;.join(reddit_pos_posts[&amp;#39;keywords&amp;#39;]))&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## &amp;lt;wordcloud.wordcloud.WordCloud object at 0x7f970a804940&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;python&#34;&gt;&lt;code&gt;plt.imshow(wc, interpolation=&amp;#39;bilinear&amp;#39;)
+plt.axis(&amp;quot;off&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## (-0.5, 755.5, 979.5, -0.5)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;python&#34;&gt;&lt;code&gt;plt.show()&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;2020-09-22-covid-megathread_files/figure-html/unnamed-chunk-3-1.png&#34; width=&#34;960&#34; /&gt;&lt;/p&gt;
+&lt;pre class=&#34;python&#34;&gt;&lt;code&gt;from PIL import Image
+import numpy as np
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 </description>
     </item>
     
