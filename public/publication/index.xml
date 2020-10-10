@@ -2,29 +2,29 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Publications | Alex Wainwright</title>
-    <link>/publication/</link>
-      <atom:link href="/publication/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://www.alexwhitelockw.me/publication/</link>
+      <atom:link href="https://www.alexwhitelockw.me/publication/index.xml" rel="self" type="application/rss+xml" />
     <description>Publications</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Fri, 20 Mar 2020 00:00:00 +0000</lastBuildDate>
     <image>
       <url>img/map[gravatar:%!s(bool=false) shape:circle]</url>
       <title>Publications</title>
-      <link>/publication/</link>
+      <link>https://www.alexwhitelockw.me/publication/</link>
     </image>
     
     <item>
       <title>A Re-Evaluation of the Approaches to Learning Questionnaire</title>
-      <link>/publication/preprint_biggs_approach_learning/</link>
+      <link>https://www.alexwhitelockw.me/publication/preprint_biggs_approach_learning/</link>
       <pubDate>Fri, 20 Mar 2020 00:00:00 +0000</pubDate>
-      <guid>/publication/preprint_biggs_approach_learning/</guid>
+      <guid>https://www.alexwhitelockw.me/publication/preprint_biggs_approach_learning/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Disciplinary Differences in Blended Learning Design: A Network Analytic Study</title>
-      <link>/publication/lak10_conference_paper_manuscript/</link>
+      <link>https://www.alexwhitelockw.me/publication/lak10_conference_paper_manuscript/</link>
       <pubDate>Sun, 01 Mar 2020 00:00:00 +0000</pubDate>
-      <guid>/publication/lak10_conference_paper_manuscript/</guid>
+      <guid>https://www.alexwhitelockw.me/publication/lak10_conference_paper_manuscript/</guid>
       <description>&lt;div class=&#34;alert alert-note&#34;&gt;
   &lt;div&gt;
     Click the &lt;em&gt;Slides&lt;/em&gt; button above to demo Academic&#39;s Markdown slides feature.
@@ -35,25 +35,25 @@
     
     <item>
       <title>Assessing the validity of a learning analytics expectation instrument: A multinational study</title>
-      <link>/publication/jcal_crosscultural_studentexpectations_paper/</link>
+      <link>https://www.alexwhitelockw.me/publication/jcal_crosscultural_studentexpectations_paper/</link>
       <pubDate>Wed, 12 Feb 2020 00:00:00 +0000</pubDate>
-      <guid>/publication/jcal_crosscultural_studentexpectations_paper/</guid>
+      <guid>https://www.alexwhitelockw.me/publication/jcal_crosscultural_studentexpectations_paper/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Exploring Student Information Problem Solving Behaviour Using Fine-Grained Concept Map and Search Tool Data</title>
-      <link>/publication/ips_computereducation_paper/</link>
+      <link>https://www.alexwhitelockw.me/publication/ips_computereducation_paper/</link>
       <pubDate>Wed, 12 Feb 2020 00:00:00 +0000</pubDate>
-      <guid>/publication/ips_computereducation_paper/</guid>
+      <guid>https://www.alexwhitelockw.me/publication/ips_computereducation_paper/</guid>
       <description></description>
     </item>
     
     <item>
       <title>The Student Expectations of Learning Analytics Questionnaire</title>
-      <link>/publication/jcal_studentexpectations_paper/</link>
+      <link>https://www.alexwhitelockw.me/publication/jcal_studentexpectations_paper/</link>
       <pubDate>Wed, 12 Feb 2020 00:00:00 +0000</pubDate>
-      <guid>/publication/jcal_studentexpectations_paper/</guid>
+      <guid>https://www.alexwhitelockw.me/publication/jcal_studentexpectations_paper/</guid>
       <description></description>
     </item>
     

@@ -2,23 +2,23 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Alex Wainwright</title>
-    <link>/</link>
-      <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://www.alexwhitelockw.me/</link>
+      <atom:link href="https://www.alexwhitelockw.me/index.xml" rel="self" type="application/rss+xml" />
     <description>Alex Wainwright</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Tue, 22 Sep 2020 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Sat, 10 Oct 2020 00:00:00 +0000</lastBuildDate>
     <image>
       <url>img/map[gravatar:%!s(bool=false) shape:circle]</url>
       <title>Alex Wainwright</title>
-      <link>/</link>
+      <link>https://www.alexwhitelockw.me/</link>
     </image>
     
     <item>
       <title>Covid Megathread</title>
-      <link>/post/covid_megathread_post/covid-megathread/</link>
-      <pubDate>Tue, 22 Sep 2020 00:00:00 +0000</pubDate>
-      <guid>/post/covid_megathread_post/covid-megathread/</guid>
+      <link>https://www.alexwhitelockw.me/post/covid_megathread_post/covid-megathread/</link>
+      <pubDate>Sat, 10 Oct 2020 00:00:00 +0000</pubDate>
+      <guid>https://www.alexwhitelockw.me/post/covid_megathread_post/covid-megathread/</guid>
       <description>
-&lt;script src=&#34;/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://www.alexwhitelockw.me/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 
 
 &lt;div id=&#34;overview&#34; class=&#34;section level1&#34;&gt;
@@ -26,170 +26,157 @@
 &lt;p&gt;To keep myself sane during lockdown, I decided to analyse public opinion towards the Victorian lockdowns, specifically those opinions vocalised on Reddit. Below you’ll find various pieces of analysis of megathread posts covering the period from ‘2020-03-03’ to ‘2020-09-13’.&lt;/p&gt;
 &lt;div id=&#34;posting-behaviour&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Posting Behaviour&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&#34;/post/covid_megathread_post/2020-09-22-covid-megathread_files/figure-html/unnamed-chunk-1-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
-&lt;pre class=&#34;python&#34;&gt;&lt;code&gt;from gensim.summarization.summarizer import summarize
-import pandas as pd
-
-megathread_posts = pd.read_csv(&amp;quot;../../../static/data/reddit_covid_vader_output.csv&amp;quot;)
-
-reaction_posts = megathread_posts.loc[megathread_posts[&amp;#39;Created Date&amp;#39;].isin([&amp;#39;2020-07-07&amp;#39;, &amp;#39;2020-08-02&amp;#39;, &amp;#39;2020-09-06&amp;#39;]),
-                                      [&amp;#39;Text&amp;#39;, &amp;#39;Created Date&amp;#39;]]
-                                      
-summarised_reaction_posts = (reaction_posts.groupby(&amp;#39;Created Date&amp;#39;)[&amp;#39;Text&amp;#39;].
-                                            apply(lambda x: &amp;#39; &amp;#39;.join(x)).
-                                            reset_index())
-
-summarised_reaction_posts[&amp;#39;summarised_posts&amp;#39;] = (summarised_reaction_posts[&amp;#39;Text&amp;#39;].
-                                                              apply(lambda x: summarize(x, split=True)))
-                                                              
-summarised_reaction_posts = summarised_reaction_posts.explode(&amp;#39;summarised_posts&amp;#39;)
-
-summarised_reaction_posts.drop(columns=&amp;#39;Text&amp;#39;, inplace=True)
-
-summarised_reaction_posts&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;##    Created Date                                   summarised_posts
-## 0    2020-07-07  * [The Age](https://www.theage.com.au/national...
-## 0    2020-07-07  * [The Guardian](https://www.theguardian.com/a...
-## 0    2020-07-07  Just want to highlight to everyone not in the ...
-## 0    2020-07-07  * You can&amp;#39;t visit a second residence outside t...
-## 0    2020-07-07  * 772 active coronavirus cases across state + ...
-## ..          ...                                                ...
-## 2    2020-09-06  It only takes a few for the virus to spread an...
-## 2    2020-09-06  &amp;gt; Tell me more about why it is remotely accept...
-## 2    2020-09-06  Tell me why you think it&amp;#39;s the slightest bit l...
-## 2    2020-09-06  And an investigation isn&amp;#39;t acceptable, you hav...
-## 2    2020-09-06  This is largely the reason I avoid engaging in...
-## 
-## [7288 rows x 2 columns]&lt;/code&gt;&lt;/pre&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;summarised_posts &amp;lt;-
-  py$summarised_reaction_posts&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## Warning in py_to_r.pandas.core.frame.DataFrame(x): index contains duplicated
-## values: row names not set&lt;/code&gt;&lt;/pre&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;knitr::kable(dplyr::sample_n(summarised_posts, 20))&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Figure &lt;a href=&#34;#fig:postplot&#34;&gt;1&lt;/a&gt; shows the daily count of posts during the time frame (2020-03-03 to 2020-09-13), along with the 14 day average (in red). Key events in the Covid-19 timeline for Victoria have been marked with the view of providing some context to the posting behaviour, specifically those events during the &lt;em&gt;second wave&lt;/em&gt;. The main takeaway from the Figure &lt;a href=&#34;#fig:postplot&#34;&gt;1&lt;/a&gt; is how the number of posts has followed the waves, with relatively low post numbers between March and April, and a uptake in posting that began to steadily rise towards the end of June.&lt;/p&gt;
+&lt;div class=&#34;figure&#34;&gt;&lt;span id=&#34;fig:postplot&#34;&gt;&lt;/span&gt;
+&lt;img src=&#34;https://www.alexwhitelockw.me/post/covid_megathread_post/2020-09-22-covid-megathread_files/figure-html/postplot-1.png&#34; alt=&#34;Daily number of posts in the Covid-19 megathread over the period of 2020-03-03 to 2020-09-13. The white line shows the raw daily count of posts, whilst the red line is the 14 day average. It can be seen that posting on the megathread was particularly low during the first wave, yet surged during Victoria&#39;s second wave. Key dates during the second wave have been highlighted to provide context for posting behaviour.&#34; width=&#34;672&#34; /&gt;
+&lt;p class=&#34;caption&#34;&gt;
+Figure 1: Daily number of posts in the Covid-19 megathread over the period of 2020-03-03 to 2020-09-13. The white line shows the raw daily count of posts, whilst the red line is the 14 day average. It can be seen that posting on the megathread was particularly low during the first wave, yet surged during Victoria’s second wave. Key dates during the second wave have been highlighted to provide context for posting behaviour.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;posting-during-the-first-wave&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Posting During the First Wave&lt;/h3&gt;
+&lt;p&gt;Cases of Coronavirus began to rise in Victoria during March, resulting in Daniel Andrews (Premier of Victoria) declaring a State of Emergency on the 16&lt;sup&gt;th&lt;/sup&gt; of that month. This also corresponded to the time when panic buying was all the rage, and daily excursions to locate toilet paper were not uncommon. In the realm of the Melbourne sub-Reddit, posts associated with Covid-19 were also on the rise (Median # of posts per day in March = 508; median absolute deviation = 333.58). The median absolute deviation shows that, on average, the number of day-to-day postings during March were 333.58 posts away from the median.&lt;/p&gt;
+&lt;p&gt;There is quite a lot of spread in the number of posts made during the month of March, with some days being particularly low (e.g., 75 posts on 2020-03-05), whilst some were relatively high (e.g., 1136 posts on 2020-03-17). Interestingly, these 1136 posts fell on the day after the state of emergency was declared. Table &lt;a href=&#34;#tab:marchpost&#34;&gt;1&lt;/a&gt; presents a random sample of 5 posts from 2020-03-17. The topic of ‘panic buying’ is quite clear from this sample of messages, with some posters referencing supermarkets running out of toilet paper, whilst others appear to have prepped for this situation.&lt;/p&gt;
 &lt;table&gt;
+&lt;caption&gt;&lt;span id=&#34;tab:marchpost&#34;&gt;Table 1: &lt;/span&gt;A random sample of 5 posts taken from 2020-03-17, corresponding to the date following the State of Emergency being declared in Victoria. General themes in these posts include the lack of toilet paper in supermarkets, prepping for the supposed apocalypse, and following social distancing guidelines.&lt;/caption&gt;
 &lt;colgroup&gt;
-&lt;col width=&#34;3%&#34; /&gt;
-&lt;col width=&#34;96%&#34; /&gt;
+&lt;col width=&#34;2%&#34; /&gt;
+&lt;col width=&#34;97%&#34; /&gt;
 &lt;/colgroup&gt;
 &lt;thead&gt;
 &lt;tr class=&#34;header&#34;&gt;
 &lt;th align=&#34;left&#34;&gt;Created Date&lt;/th&gt;
-&lt;th align=&#34;left&#34;&gt;summarised_posts&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;Post Text&lt;/th&gt;
 &lt;/tr&gt;
 &lt;/thead&gt;
 &lt;tbody&gt;
 &lt;tr class=&#34;odd&#34;&gt;
-&lt;td align=&#34;left&#34;&gt;2020-08-02&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;If the discarded rubber near my work I don’t think tracking down people happens.&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;2020-03-17&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;We’re being made to go into work, despite a confirmed case in our building :-( Take whatever steps you can to keep yourself safe. I hope they change the mandatory attendance requirements for your class soon&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr class=&#34;even&#34;&gt;
-&lt;td align=&#34;left&#34;&gt;2020-07-07&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;With social distancing guidelines in place, I can definitely see people getting very touch starved or touch sensitive.&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;2020-03-17&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;Spend some time in r/conspiracy&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr class=&#34;odd&#34;&gt;
-&lt;td align=&#34;left&#34;&gt;2020-07-07&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;But you know, it’s a new thing I’ve never done before and I’m going to be doing it by myself.&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;2020-03-17&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;Yeah, I ain’t gonna be hugging randoms anytime soon, but I’m certainly getting out on the bike with these quieter roads!&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr class=&#34;even&#34;&gt;
-&lt;td align=&#34;left&#34;&gt;2020-08-02&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;Why &lt;em&gt;limit&lt;/em&gt; the hours in the day that people can access a supermarket or go for a walks, therefore increasing the number of people undertaking these things when it is permissible?&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;2020-03-17&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;Maybe just be prepared in the future? Why is panic buying or having nothing the only 2 options? At the start of the year i made sure to buy an extra 24 pack of toilet paper and a months food for my partner and myself, as well as cleaning supplies, soap, board games etc As a result we are not worried about food supplies or toilet paper as we prepared in advance and we are not taking away supplies from poor or elderly people. Dont blame your lack of foresight on others, you control your life&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr class=&#34;odd&#34;&gt;
-&lt;td align=&#34;left&#34;&gt;2020-08-02&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;Just go instant jail, especially for the curfew, to make sure people follow the rules I mean Shepparton has no active cases and is still going to stage 3, so there ya go.&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr class=&#34;even&#34;&gt;
-&lt;td align=&#34;left&#34;&gt;2020-08-02&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;“Dan Andrews is awful, we need another leader like…” and then they don’t name who should replace him because it just turns out they hate all Labor people I don’t think anyone disagrees there.&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr class=&#34;odd&#34;&gt;
-&lt;td align=&#34;left&#34;&gt;2020-08-02&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;That’s what i read a few weeks ago, that they tested the virus and it was traceable back to hotel quarantine.&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr class=&#34;even&#34;&gt;
-&lt;td align=&#34;left&#34;&gt;2020-09-06&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;A sudden explosion of dozens (or worse) cases in November because idiots are not going for tests in September/October’s fucks us all, again.&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr class=&#34;odd&#34;&gt;
-&lt;td align=&#34;left&#34;&gt;2020-07-07&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;But considering the virus spreads via water droplets I don’t understand how you think a place where people spread waterdroplets around from sweat could ever stay open.&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr class=&#34;even&#34;&gt;
-&lt;td align=&#34;left&#34;&gt;2020-07-07&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;&lt;a href=&#34;https://i.imgur.com/4FaPUgY.jpg&#34; class=&#34;uri&#34;&gt;https://i.imgur.com/4FaPUgY.jpg&lt;/a&gt; It just means it won’t be certain suburbs/postcodes on restrictions, it will be the whole of Vic Statewide as in area (all VIC) and stage 3 is what level restrictions are in place I think lockdown is the stage 3 restrictions likely - only go out to get food, medication, exercise, care for someone.&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr class=&#34;odd&#34;&gt;
-&lt;td align=&#34;left&#34;&gt;2020-09-06&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;It’s like Melbourne is suddenly full of teenagers that got told they’re grounded.&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr class=&#34;even&#34;&gt;
-&lt;td align=&#34;left&#34;&gt;2020-08-02&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;/s Normally celebrated August 31st for a few days so not sure that logic works..&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr class=&#34;odd&#34;&gt;
-&lt;td align=&#34;left&#34;&gt;2020-09-06&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;Maybe this whole thing has given me a bleak outlook on life now, but at the end of the day, death is going to happen one way or another I don’t think people actually grasp the concept of how the country/state will look after months more of this.&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr class=&#34;even&#34;&gt;
-&lt;td align=&#34;left&#34;&gt;2020-07-07&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;* Regarding groceries/food: Coles has repurposed its Waterfield St Coburg supermarket as a &#34;“pop-up fulfilment centre”&#34; packing boxes for the flats (from the amount of organisations handling food and specific dietary requests, I’m going to say that PROBABLY the tenants are fine for food now and people might want to reach out to ask about things like clothes or toys for children or entertainment instead).&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr class=&#34;odd&#34;&gt;
-&lt;td align=&#34;left&#34;&gt;2020-07-07&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;Looking at places like Florida and Cali who are so desperate to re-open despite huge numbers, it’s great we aren’t that selfish.&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr class=&#34;even&#34;&gt;
-&lt;td align=&#34;left&#34;&gt;2020-08-02&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;I think the good thing about hair dressers, is you’re likely to only go once or twice over the next 6 weeks tops.&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr class=&#34;odd&#34;&gt;
-&lt;td align=&#34;left&#34;&gt;2020-08-02&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;I don’t believe things are going to get much better in another six weeks time with these new restrictions.&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr class=&#34;even&#34;&gt;
-&lt;td align=&#34;left&#34;&gt;2020-09-06&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;don’t erase us postcode lockdowners *5 Cases for 14 days.&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr class=&#34;odd&#34;&gt;
-&lt;td align=&#34;left&#34;&gt;2020-09-06&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;Lockdowns work Thank god the entire country consists only of younger people I don’t think I have the stomach for the hotel quarantine otherwise I would already be gone.&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr class=&#34;even&#34;&gt;
-&lt;td align=&#34;left&#34;&gt;2020-07-07&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;reputable source or GTFO I agree….the word Hero is thrown around so frequently by the press these days that I think people are beginning to lose sight of it’s real meaning I haven’t seen a single reference to them being called &#34;“heroes”&#34; Yeah, you tell ‘em mate.&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;2020-03-17&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;Just did a walk through a lot of the CBD (I live here), no TP anywhere.&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;p&gt;&lt;img src=&#34;/post/covid_megathread_post/2020-09-22-covid-megathread_files/figure-html/unnamed-chunk-4-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
-&lt;pre class=&#34;python&#34;&gt;&lt;code&gt;from gensim.summarization import keywords
-import matplotlib.pyplot as plt
-import numpy as np
-from PIL import Image
-from wordcloud import WordCloud
-
-reddit_vader = pd.read_csv(&amp;quot;../../../static/data/reddit_covid_vader_output.csv&amp;quot;)
-
-reddit_vader[&amp;#39;keywords&amp;#39;] = reddit_vader[&amp;#39;Text&amp;#39;].apply(lambda x: keywords(x, split=True))
-
-redd_vader_long = reddit_vader.explode(&amp;#39;keywords&amp;#39;)
-
-reddit_pos_posts = redd_vader_long.loc[(redd_vader_long[&amp;#39;compound&amp;#39;] &amp;gt; .4) &amp;amp; (redd_vader_long[&amp;#39;keywords&amp;#39;].str.contains(&amp;#39;NaN&amp;#39;) == False)]
-
-melb_logo =  np.array(Image.open(&amp;#39;../../../static/img/mask_image_reddit_analysis.png&amp;#39;))
-
-wc = WordCloud(mask=melb_logo,
-               background_color=&amp;#39;white&amp;#39;,
-               contour_width=3,
-               contour_color=&amp;#39;black&amp;#39;,
-               colormap=&amp;#39;cividis&amp;#39;)
-               
-wc.generate(&amp;#39; &amp;#39;.join(reddit_pos_posts[&amp;#39;keywords&amp;#39;]))&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## &amp;lt;wordcloud.wordcloud.WordCloud object at 0x7f9a01218580&amp;gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;pre class=&#34;python&#34;&gt;&lt;code&gt;plt.imshow(wc, interpolation=&amp;#39;bilinear&amp;#39;)
-plt.axis(&amp;quot;off&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;posting-during-the-second-wave&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Posting During the Second Wave&lt;/h3&gt;
+&lt;p&gt;Despite lockdown relaxations around the beginning of June, these were short-lived. By the 20&lt;sup&gt;th&lt;/sup&gt; June various restrictions came into force, with postcode lockdowns being enforced on the 30&lt;sup&gt;th&lt;/sup&gt; June. During the month of June we can see a stark contrast in posting behaviour. If we take the period from the 2020-06-01 to 2020-06-19 (inclusive), the median number of posts were 44 (median absolute deviation = 25.2042). Compare this to period between 2020-06-20 to 2020-06-30, wherein the median number of posts rose to 294 (median absolute deviation = 139.3644), representing a 7-fold increase in the average day-to-day posting.&lt;/p&gt;
+&lt;p&gt;Returning to Figure &lt;a href=&#34;#fig:postplot&#34;&gt;1&lt;/a&gt;, there are three discernible peaks in posting behaviour over the period of July to September. These peaks align with various lockdown announcements. On 2020-07-07, when Stage 3 &lt;em&gt;Stay at Home&lt;/em&gt; restrictions were announced, there were 4304 posts made. 2020-08-02 was when the &lt;em&gt;State of Disaster&lt;/em&gt; was declared and the move to Stage 4 restrictions; the number of posts made on this day was 7295. Finally, on 2020-09-06 the &lt;em&gt;Roadmap&lt;/em&gt; was unveiled, resulting in another uptick in postings (8277).&lt;/p&gt;
+&lt;p&gt;Table &lt;a href=&#34;#tab:secondWavePosts&#34;&gt;2&lt;/a&gt; contains a random sample of 15 sentences from the aforementioned dates (i.e., ‘2020-07-07’, ‘2020-08-02’, and ‘2020-09-06’). The sentences were first obtained by concatenating the posts for each date and applying the Gensim &lt;em&gt;&lt;a href=&#34;https://radimrehurek.com/gensim/summarization/summariser.html&#34;&gt;summarizer&lt;/a&gt;&lt;/em&gt; function to summarise the messages. For the ‘2020-07-07’, messages seem to refer to questions around leaving metro Melbourne for regional areas and the concern around spending 6 weeks in lockdown. Messages on ‘2020-08-02’ seem to be centred on seeking clarification for the various &lt;em&gt;Stage 4&lt;/em&gt; restrictions and vocalising their feelings of apathy towards a pro-longed lockdown. One message in the sample is associated with ‘2020-09-06’ and succinctly summarises how we should not get into the habit of focusing on daily case announcements.&lt;/p&gt;
+&lt;table&gt;
+&lt;caption&gt;&lt;span id=&#34;tab:secondWavePosts&#34;&gt;Table 2: &lt;/span&gt;Sample of 15 sentences across the dates of ‘2020-07-07’, ‘2020-08-02’, and ‘2020-09-06’. These sentences were obtained by applying the gensim summarizer function to a concatenated list of posts for each of the aforementioned dates. In this way, there is a likelihood that two or more sentences could originate from a single post.&lt;/caption&gt;
+&lt;colgroup&gt;
+&lt;col width=&#34;2%&#34; /&gt;
+&lt;col width=&#34;97%&#34; /&gt;
+&lt;/colgroup&gt;
+&lt;thead&gt;
+&lt;tr class=&#34;header&#34;&gt;
+&lt;th align=&#34;left&#34;&gt;Created Date&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;Post&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;2020-07-07&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;I’m renting in Melbourne but my family lives in regional Vic. Any idea if I could move home in (for example) a few weeks if everything goes to shit?&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;2020-07-07&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;That’s fair enough but it still happened here while we had active community cases, and the stuff I saw from friends on social media wasn’t in line with social distancing practices and is likely still contributing, we still have a whole bunch of untraced cases and people heeding my advice and being more conscious of the impact of behaving that way is worth people considering regardless of the other factors that lead to this.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;2020-08-02&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;why do we listen to all these elected leaders, that are informed by teams of professionals that are considered experts in their fields, when we have people like you around?&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;2020-07-07&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;It’s worth keeping in mind that this is a very infectious and very nasty virus, and for a city of nearly 5m people, we’re overall doing a pretty good job of keeping it under control.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;2020-07-07&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;Covids are thinking exactly the same No we didn’t, clearly the virus was still out there last time when people were supposed to be self-isolating, and it ain’t leaving.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;2020-08-02&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;If your business dosnt facilitate essential supplies or pharmacist / providing care, I imagine your business will be either work from home, or flat out closed.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;2020-08-02&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;For those interested, here’s today (Sunday August 2)’s press conference: &lt;a href=&#34;https://www.youtube.com/watch?v=rkYfnfYwO8o&#34; class=&#34;uri&#34;&gt;https://www.youtube.com/watch?v=rkYfnfYwO8o&lt;/a&gt; pretty much sums up this week…&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;2020-07-07&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;Your government is about a week behind where they need to be.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;2020-08-02&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;it worked in every other country No, see Dan is secretly hoping people will start killing themselves off and going into deep depression because his ultimate goal is to watch the state crumble and burn…&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;2020-08-02&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;Hopefully they don’t ban movers though, I am married to a ‘collector’ and have a lot of things They specifically say you’re allowed 5ks from the location you sleep, if you’re moving then that’s fine.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;2020-08-02&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;I completely agree and someone who has lived almost their entire life and whats more as part of a privileged generation should not be the determining factor in destroying our nations economy and the mental health of people with their whole lives ahead of them.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;2020-07-07&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;I also understand six weeks might feel like an eternity.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;2020-09-06&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;We absolutely can’t get into a world of &#34;“we need less than X cases per day before we open”&#34;…&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;2020-08-02&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;Can only think it’s to prevent parties/gatherings and people avoiding police by travelling at night.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;2020-08-02&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;Pushing the blame to people after hotel quarantine, contact tracing and age care fail AND when most contaminations occurred in work places.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;sentiment-analysis&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Sentiment Analysis&lt;/h2&gt;
+&lt;p&gt;Figure &lt;a href=&#34;#fig:vaderPlot&#34;&gt;2&lt;/a&gt; presents the day-to-day distribution of the Vader compound scores, facetted by month. The use of Vader to measure sentiment is applicable in this context as it is suited to social media data. The compound score corresponds to a normalisation of the summed valence scores across words within the message. As can be seen in Figure &lt;a href=&#34;#fig:vaderPlot&#34;&gt;2&lt;/a&gt;, compound scores appeared to be quite variable in the months of April, May, and June. Given that the number of posts during these months were relatively low, these distributions are not unexpected. During those months wherein posting behaviour was higher (March, July, August, and September), we can see that the day-to-day compound score had a peak at 0. It may be the case that posts were generally neutral, outweighing those that were overly positive or negative in sentiment. We also have to consider the confounding factor that messages will have been moderated to an extent; therefore, we may not be seeing a complete representation of postings.&lt;/p&gt;
+&lt;div class=&#34;figure&#34;&gt;&lt;span id=&#34;fig:vaderPlot&#34;&gt;&lt;/span&gt;
+&lt;img src=&#34;https://www.alexwhitelockw.me/post/covid_megathread_post/2020-09-22-covid-megathread_files/figure-html/vaderPlot-1.png&#34; alt=&#34;Day-to-day distribution of Vader Compound Scores for each post across each month. Plots show that there was a high variability in compound scores during April, May, and June, which is a likely a result of there being a smaller number of posts during these months. Months such as July and August show the distributions to peak at 0, a likely result of there being a far greater number of posts during this time.&#34; width=&#34;672&#34; /&gt;
+&lt;p class=&#34;caption&#34;&gt;
+Figure 2: Day-to-day distribution of Vader Compound Scores for each post across each month. Plots show that there was a high variability in compound scores during April, May, and June, which is a likely a result of there being a smaller number of posts during these months. Months such as July and August show the distributions to peak at 0, a likely result of there being a far greater number of posts during this time.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;summary&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Summary&lt;/h2&gt;
+&lt;p&gt;Although not representative of the larger population, posting behaviour within the megathread has offered some interesting insights. For one, it can be seen that posting has seemingly followed the number of reported infections. As this data only reflects up to ‘2020-09-13’ this conclusion is, however, limited. In conjunction with the information of the message content, we can also see how topics within the posts have shifted over the course of these 7 months.&lt;/p&gt;
+&lt;p&gt;To end this post, I present Figure &lt;a href=&#34;#fig:compoundWc&#34;&gt;3&lt;/a&gt; that presents keywords (using the Gensim &lt;em&gt;&lt;a href=&#34;https://radimrehurek.com/gensim/summarization/keywords.html&#34;&gt;keywords&lt;/a&gt;&lt;/em&gt; function) from those messages with a Vader compound score exceeding .4 (i.e., they have a positive sentiment).&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;## &amp;lt;wordcloud.wordcloud.WordCloud object at 0x7fc948e82940&amp;gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## (-0.5, 755.5, 979.5, -0.5)&lt;/code&gt;&lt;/pre&gt;
-&lt;pre class=&#34;python&#34;&gt;&lt;code&gt;plt.show()&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/covid_megathread_post/2020-09-22-covid-megathread_files/figure-html/unnamed-chunk-5-1.png&#34; width=&#34;960&#34; /&gt;&lt;/p&gt;
+&lt;div class=&#34;figure&#34;&gt;&lt;span id=&#34;fig:compoundWc&#34;&gt;&lt;/span&gt;
+&lt;img src=&#34;https://www.alexwhitelockw.me/post/covid_megathread_post/2020-09-22-covid-megathread_files/figure-html/compoundWc-1.png&#34; alt=&#34;Wordcloud of those keywords in messages with Vader compound scores exceeding the value of .4&#34; width=&#34;960&#34; /&gt;
+&lt;p class=&#34;caption&#34;&gt;
+Figure 3: Wordcloud of those keywords in messages with Vader compound scores exceeding the value of .4
+&lt;/p&gt;
+&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 </description>
@@ -197,17 +184,17 @@ plt.axis(&amp;quot;off&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
     
     <item>
       <title>A Re-Evaluation of the Approaches to Learning Questionnaire</title>
-      <link>/publication/preprint_biggs_approach_learning/</link>
+      <link>https://www.alexwhitelockw.me/publication/preprint_biggs_approach_learning/</link>
       <pubDate>Fri, 20 Mar 2020 00:00:00 +0000</pubDate>
-      <guid>/publication/preprint_biggs_approach_learning/</guid>
+      <guid>https://www.alexwhitelockw.me/publication/preprint_biggs_approach_learning/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Disciplinary Differences in Blended Learning Design: A Network Analytic Study</title>
-      <link>/publication/lak10_conference_paper_manuscript/</link>
+      <link>https://www.alexwhitelockw.me/publication/lak10_conference_paper_manuscript/</link>
       <pubDate>Sun, 01 Mar 2020 00:00:00 +0000</pubDate>
-      <guid>/publication/lak10_conference_paper_manuscript/</guid>
+      <guid>https://www.alexwhitelockw.me/publication/lak10_conference_paper_manuscript/</guid>
       <description>&lt;div class=&#34;alert alert-note&#34;&gt;
   &lt;div&gt;
     Click the &lt;em&gt;Slides&lt;/em&gt; button above to demo Academic&#39;s Markdown slides feature.
@@ -218,9 +205,9 @@ plt.axis(&amp;quot;off&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
     
     <item>
       <title>Disciplinary Differences in Blended Learning Design: A Network Analytic Study</title>
-      <link>/talk/lak10_conference_paper/</link>
+      <link>https://www.alexwhitelockw.me/talk/lak10_conference_paper/</link>
       <pubDate>Sun, 01 Mar 2020 00:00:00 +0000</pubDate>
-      <guid>/talk/lak10_conference_paper/</guid>
+      <guid>https://www.alexwhitelockw.me/talk/lak10_conference_paper/</guid>
       <description>&lt;div class=&#34;alert alert-note&#34;&gt;
   &lt;div&gt;
     Click the &lt;em&gt;Slides&lt;/em&gt; button above to demo Academic&#39;s Markdown slides feature.
@@ -231,11 +218,11 @@ plt.axis(&amp;quot;off&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
     
     <item>
       <title>Approaches to Learning: A Re-Evaluation</title>
-      <link>/post/biggs_approaches_post/approaches-to-learning-a-re-evaluation/</link>
+      <link>https://www.alexwhitelockw.me/post/biggs_approaches_post/approaches-to-learning-a-re-evaluation/</link>
       <pubDate>Tue, 18 Feb 2020 00:00:00 +0000</pubDate>
-      <guid>/post/biggs_approaches_post/approaches-to-learning-a-re-evaluation/</guid>
+      <guid>https://www.alexwhitelockw.me/post/biggs_approaches_post/approaches-to-learning-a-re-evaluation/</guid>
       <description>
-&lt;script src=&#34;/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://www.alexwhitelockw.me/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 
 
 &lt;div id=&#34;introduction&#34; class=&#34;section level1&#34;&gt;
@@ -253,14 +240,14 @@ plt.axis(&amp;quot;off&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;No correlations were specified between the errors of any of the 20 items&lt;/p&gt;
 &lt;p&gt;The original work of &lt;span class=&#34;citation&#34;&gt;Biggs, Kember, and Leung (2001)&lt;/span&gt; reported a Comparative Fit Index (CFI) of .904 and Root Mean Square Residual (RMSR) of .058 for this first model. The latter does not fully meet the repeatedly touted rule of thumbs resulting from the simulation work of &lt;span class=&#34;citation&#34;&gt;Hu and Bentler (1999)&lt;/span&gt; (i.e., CFI = .95, SRMR = .08).&lt;/p&gt;
 &lt;div class=&#34;figure&#34;&gt;&lt;span id=&#34;fig:item-model&#34;&gt;&lt;/span&gt;
-&lt;img src=&#34;/post/biggs_approaches_post/biggs_approaches_model.jpeg&#34; alt=&#34;Proposed Item Level Model of the R-SPQ-2F&#34; width=&#34;90%&#34; /&gt;
+&lt;img src=&#34;https://www.alexwhitelockw.me/post/biggs_approaches_post/biggs_approaches_model.jpeg&#34; alt=&#34;Proposed Item Level Model of the R-SPQ-2F&#34; width=&#34;90%&#34; /&gt;
 &lt;p class=&#34;caption&#34;&gt;
 Figure 1: Proposed Item Level Model of the R-SPQ-2F
 &lt;/p&gt;
 &lt;/div&gt;
 &lt;p&gt;Model two is presented in Figure &lt;a href=&#34;#fig:higher-order-model&#34;&gt;2&lt;/a&gt; and is composed of two higher-order factors, each measured by two factors. The two lower-order factors were created through item parcelling and resulted in a marked improvement in model fit &lt;span class=&#34;citation&#34;&gt;(CFI = .992, SRMR = .015; Biggs, Kember, and Leung 2001)&lt;/span&gt;.&lt;/p&gt;
 &lt;div class=&#34;figure&#34;&gt;&lt;span id=&#34;fig:higher-order-model&#34;&gt;&lt;/span&gt;
-&lt;img src=&#34;/post/biggs_approaches_post/bigg_approaches_model_two.jpeg&#34; alt=&#34;Higher Order Factor Model of the R-SPQ-2F&#34; width=&#34;40%&#34; /&gt;
+&lt;img src=&#34;https://www.alexwhitelockw.me/post/biggs_approaches_post/bigg_approaches_model_two.jpeg&#34; alt=&#34;Higher Order Factor Model of the R-SPQ-2F&#34; width=&#34;40%&#34; /&gt;
 &lt;p class=&#34;caption&#34;&gt;
 Figure 2: Higher Order Factor Model of the R-SPQ-2F
 &lt;/p&gt;
@@ -635,33 +622,33 @@ print.psych(biggs_model_two_efa,
     
     <item>
       <title>Assessing the validity of a learning analytics expectation instrument: A multinational study</title>
-      <link>/publication/jcal_crosscultural_studentexpectations_paper/</link>
+      <link>https://www.alexwhitelockw.me/publication/jcal_crosscultural_studentexpectations_paper/</link>
       <pubDate>Wed, 12 Feb 2020 00:00:00 +0000</pubDate>
-      <guid>/publication/jcal_crosscultural_studentexpectations_paper/</guid>
+      <guid>https://www.alexwhitelockw.me/publication/jcal_crosscultural_studentexpectations_paper/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Exploring Student Information Problem Solving Behaviour Using Fine-Grained Concept Map and Search Tool Data</title>
-      <link>/publication/ips_computereducation_paper/</link>
+      <link>https://www.alexwhitelockw.me/publication/ips_computereducation_paper/</link>
       <pubDate>Wed, 12 Feb 2020 00:00:00 +0000</pubDate>
-      <guid>/publication/ips_computereducation_paper/</guid>
+      <guid>https://www.alexwhitelockw.me/publication/ips_computereducation_paper/</guid>
       <description></description>
     </item>
     
     <item>
       <title>The Student Expectations of Learning Analytics Questionnaire</title>
-      <link>/publication/jcal_studentexpectations_paper/</link>
+      <link>https://www.alexwhitelockw.me/publication/jcal_studentexpectations_paper/</link>
       <pubDate>Wed, 12 Feb 2020 00:00:00 +0000</pubDate>
-      <guid>/publication/jcal_studentexpectations_paper/</guid>
+      <guid>https://www.alexwhitelockw.me/publication/jcal_studentexpectations_paper/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Slides</title>
-      <link>/slides/example/</link>
+      <link>https://www.alexwhitelockw.me/slides/example/</link>
       <pubDate>Tue, 05 Feb 2019 00:00:00 +0000</pubDate>
-      <guid>/slides/example/</guid>
+      <guid>https://www.alexwhitelockw.me/slides/example/</guid>
       <description>&lt;h1 id=&#34;create-slides-in-markdown-with-academic&#34;&gt;Create slides in Markdown with Academic&lt;/h1&gt;
 &lt;p&gt;
 &lt;a href=&#34;https://sourcethemes.com/academic/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Academic&lt;/a&gt; | 
@@ -791,36 +778,18 @@ Three
     </item>
     
     <item>
-      <title>Privacy Policy</title>
-      <link>/privacy/</link>
-      <pubDate>Thu, 28 Jun 2018 00:00:00 +0100</pubDate>
-      <guid>/privacy/</guid>
-      <description>&lt;p&gt;&amp;hellip;&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Terms</title>
-      <link>/terms/</link>
-      <pubDate>Thu, 28 Jun 2018 00:00:00 +0100</pubDate>
-      <guid>/terms/</guid>
-      <description>&lt;p&gt;&amp;hellip;&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
       <title>External Project</title>
-      <link>/project/external-project/</link>
+      <link>https://www.alexwhitelockw.me/project/external-project/</link>
       <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
-      <guid>/project/external-project/</guid>
+      <guid>https://www.alexwhitelockw.me/project/external-project/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Internal Project</title>
-      <link>/project/internal-project/</link>
+      <link>https://www.alexwhitelockw.me/project/internal-project/</link>
       <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
-      <guid>/project/internal-project/</guid>
+      <guid>https://www.alexwhitelockw.me/project/internal-project/</guid>
       <description>&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellus ac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum. Sed ac faucibus dolor, scelerisque sollicitudin nisi. Cras purus urna, suscipit quis sapien eu, pulvinar tempor diam. Quisque risus orci, mollis id ante sit amet, gravida egestas nisl. Sed ac tempus magna. Proin in dui enim. Donec condimentum, sem id dapibus fringilla, tellus enim condimentum arcu, nec volutpat est felis vel metus. Vestibulum sit amet erat at nulla eleifend gravida.&lt;/p&gt;
 &lt;p&gt;Nullam vel molestie justo. Curabitur vitae efficitur leo. In hac habitasse platea dictumst. Sed pulvinar mauris dui, eget varius purus congue ac. Nulla euismod, lorem vel elementum dapibus, nunc justo porta mi, sed tempus est est vel tellus. Nam et enim eleifend, laoreet sem sit amet, elementum sem. Morbi ut leo congue, maximus velit ut, finibus arcu. In et libero cursus, rutrum risus non, molestie leo. Nullam congue quam et volutpat malesuada. Sed risus tortor, pulvinar et dictum nec, sodales non mi. Phasellus lacinia commodo laoreet. Nam mollis, erat in feugiat consectetur, purus eros egestas tellus, in auctor urna odio at nibh. Mauris imperdiet nisi ac magna convallis, at rhoncus ligula cursus.&lt;/p&gt;
 &lt;p&gt;Cras aliquam rhoncus ipsum, in hendrerit nunc mattis vitae. Duis vitae efficitur metus, ac tempus leo. Cras nec fringilla lacus. Quisque sit amet risus at ipsum pharetra commodo. Sed aliquam mauris at consequat eleifend. Praesent porta, augue sed viverra bibendum, neque ante euismod ante, in vehicula justo lorem ac eros. Suspendisse augue libero, venenatis eget tincidunt ut, malesuada at lorem. Donec vitae bibendum arcu. Aenean maximus nulla non pretium iaculis. Quisque imperdiet, nulla in pulvinar aliquet, velit quam ultrices quam, sit amet fringilla leo sem vel nunc. Mauris in lacinia lacus.&lt;/p&gt;
